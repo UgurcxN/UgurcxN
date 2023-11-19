@@ -1,0 +1,3992 @@
+/* /**
+* @isim Discord Windows 11
+* @sürüm 0.9.1
+* @description Discord için Windows 11 stili.
+* @yazar Josh65-2201
+* @kaynak https://github.com/Josh65-2201/Discord-Windows-11-theme
+*/
+
+/* İthalat ------------------------------------ -------------------------------------------------- ---------- */
+	/* Nyria tarafından rengi bozuldu */
+	@import url('https://nyri4.github.io/Discoloured/main.css');
+
+	/* Saltssaumure'un ayar simgeleri - yalnızca Vencord, ThemeAttributes eklentisine ihtiyaç duyar */
+	@import url('https://raw.githubusercontent.com/MiniDiscordThemes/SettingsIcons/main/SettingsIcons.theme.css');
+
+	/* CreArts'ın ayar simgeleri - Yalnızca daha iyi discord */
+	@import url('https://crearts-community.github.io/Settings-Icons/clients/settings-icons.theme.css');
+
+	/* Xyhlo'ya göre kanal simgeleri */
+	@import url('https://xhylo.github.io/ChannelIcons/Channelicons.css');
+
+	/* CreArts'ın içerik simgeleri */
+	@import url('https://crearts-community.github.io/Context-Icons/clients/betterdiscord.css');
+
+	/* DevilBro'dan Windows 11'in akıcı emojisi*/
+	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/spritesheets.css');
+	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/people.css');
+	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/nature.css');
+	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/food.css');
+	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/activity.css');
+	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/travel.css');
+	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/objects.css');
+	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/symbols.css');
+	@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/src/Microsoft/flags.css');
+
+	/* Dablulite tarafından NoLightOnDark - Işık modunu kullanıp kullanmadığınızı belirtin */
+	@import url('https://dablulite.github.io/css-snippets/NoLightInDark/import.css');
+
+:kök{
+/* Ayarlar |Varsayılan = +| -------------------------------------------------- ------------------------------- */
+	--kızartmalar: esnek; /* + açık = esnek kapalı = yok */
+	--waveToUser: yok; /* açık = esnek + kapalı = yok */
+	--nitro: yok; /* + açık = esnek kapalı = yok */
+
+
+/* DEĞİŞTİRME --------------------------------------------- -------------------------------------------------- -------- */
+	/* Bildirimler */
+	--infobarBaşarı: 57, 61, 27;
+	--infobarUyarı: 67, 53, 25;
+	--infobarError: 68, 39, 38;
+
+	/* Diğer */
+	--okunmamış: 0, 200, 29;
+	--avatarBorderThickness: 2px;
+
+	--userlistWidth: 250px;
+	--userpopoutWidth: 300px;
+	--sidebarGenişlik: 320 piksel;
+	--contentDialogWidth: 512px;
+	--colorTransition: 0,1 saniyelik giriş-çıkış kolaylığı !önemli;
+
+	/* Ayarlar Modeli */
+	--settingsmodalbackground: şeffaf;
+	--settingsmodalwidth: 1098px;
+	--settingsmodalheight: 690px;
+}
+
+
+/* Windows 11 stil öğeleri: Koyu ------------------------------- ----------------------------------------- */
+.tema-karanlık{
+	--backgroundTitlebar: 32, 32, 32;
+	--borderTitlebar: 29, 29, 29;
+	--backgroundTint: 39, 39, 39;
+	--arka plan: 44, 44, 44;
+
+	--contextBackground: 45, 45, 45;
+
+	--contentDialogBackdrop: 0, 0, 0, 0,3;
+	--contentDialogContent: 43, 43, 43;
+	--contentDialogFooterHeader: 32, 32, 32;
+
+	--scrollbarThumb: 159, 159, 159;
+	--scrollbarTrack: 45, 45, 45;
+
+	--metin: 255, 255, 255;
+
+	--sidebarButtonHover: 55, 55, 55;
+	--sidebarButtonSelectedHover: 50, 50, 50, 0,5;
+
+	--buttonStandart: 50, 50, 50;
+	--buttonHover: 62, 62, 62;
+	--buttonSeçili: 58, 58, 58;
+	--buttonDevre Dışı: 42, 42, 42;
+	--buttonBorder: 53, 53, 53;
+
+	--textboxStandart: 43, 43, 43;
+	--textboxHover: 50, 50, 50;
+	--textboxSeçili: 32, 32, 32;
+
+	--toggleSwitchOffIcon: 204, 204, 204;
+
+	--infobarMesaj: 53, 53, 53;
+}
+
+/* Windows 11 stil öğeleri: Hafif ------------------------------- ---------------------------------------- */
+.tema-ışık{
+	--backgroundTitlebar: 32, 32, 32;
+	--borderTitlebar: 29, 29, 29;
+	--backgroundTint: 35, 35, 35;
+	--arka plan: 39, 39, 39;
+
+	--contentDialogBackdrop: 0, 0, 0, 0,4;
+	--contentDialogContent: 43, 43, 43;
+	--contentDialogFooterHeader: 32, 32, 32;
+
+	--scrollbarThumb: 159, 159, 159;
+	--scrollbarTrack: 45, 45, 45;
+
+	--metin: 255, 255, 255;
+
+	--sidebarButtonHover: 55, 55, 55;
+	--sidebarButtonSelectedHover: 50, 50, 50, 0,5;
+
+	--buttonStandart: 45, 45, 45;
+	--buttonHover: 50, 50, 50;
+	--buttonSeçili: 39, 39, 39;
+	--buttonDevre Dışı: 42, 42, 42;
+	--buttonBorder: 53, 53, 53;
+	
+	--textboxStandart: 45, 45, 45;
+	--textboxHover: 50, 50, 50;
+	--textboxSeçili: 31, 31, 31;
+
+	--toggleSwitchOffIcon: 204, 204, 204;
+	
+	--infobarMesaj: 50, 50, 50;
+}
+
+
+/* 1. Paylaşılan kontroller -------------------------------------------- -------------------------------------------------- -- */
+	/* Tostlar/Bildirimler */
+		/* Stil */
+		.bd-tost, /* Yükleniyor: alt */
+		.toast-1DEQGy,
+		.tost-q3Y4wI,
+		.toast-g4bfgI{ /* Kur: sağ üst */
+			genişlik: 384 piksel;
+			sol: 192 piksel;
+			arka plan: rgb(var(--infobarSuccess)) !important;
+			dolgu: 16px 16px 16px 48px !önemli;
+			kenarlık yarıçapı: 5 piksel;
+			kutu gölgesi: yok;
+			renk:rgb(var(--text));
+			opaklık: 1;
+			üst kenar boşluğu: 4 piksel;
+			z-endeksi: 1000 !önemli;
+		}
+
+		/* Görüntülemek */
+			.bd-tost, /* Yükleniyor: alt */
+			.toast-1DEQGy,
+			.tost-q3Y4wI,
+			.tost-g4bfgI,
+			.loadingIconWrapper-PsVJ9m{ /* BD Eklentisi: DevilBro'dan BD Eklentisi ve tema deposu */
+				görüntü: var(--toasts) !important;
+			}
+
+
+	/* Metin seçimi */
+	::seçim{
+		arka plan: var(--os-accent-color, #4cc2ff);
+	}
+
+
+	/* Kaydırma çubukları */
+		/* Konum */
+		*::-webkit-kaydırma çubuğu{
+			dolgu: 0px;
+			kenar boşluğu: 0 piksel;
+			genişlik: 12px !önemli;
+		}
+
+		/* İzlemek */
+		*::-webkit-kaydırma çubuğu-izi{
+			görünürlük: görünür !önemli;
+			arka plan rengi: rgb(var(--scrollbarTrack)) !important;
+			kenarlık: 0px !önemli;
+			sınır yarıçapı: 0px !önemli;
+		}
+			/* Oklar */
+			*::-webkit-kaydırma çubuğu-düğmesi{
+				görünürlük: görünür;
+				arka plan rengi: rgb(var(--scrollbarTrack));
+			}
+				/* Tepe */
+				*::-webkit-kaydırma çubuğu-düğmesi:tek düğme:dikey:azaltma{
+					arka plan resmi: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-dark-arrow-u.png?raw=true');
+					arka planda tekrarlama: tekrarlama yok;
+				}
+				/* Alt */
+				*::-webkit-kaydırma çubuğu-düğmesi:tek düğme:dikey:artırma{
+					arka plan görüntüsü: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-dark-arrow-d.png?raw=true');
+					arka planda tekrarlama: tekrarlama yok;
+				}
+
+		/* Baş parmak */
+		*::-webkit-kaydırma çubuğu-başparmak{
+			görünürlük: görünür !önemli;
+			arka plan rengi: rgb(var(--scrollbarThumb)) !important;
+			kenarlık: 3 piksel katı şeffaf !önemli;
+			sınır yarıçapı: 8px !önemli;
+		}
+
+
+	/* Kutuyu işaretleyin */
+		/* Seçilmemiş */
+		.checkboxInner-1aRh1d{ /* Video görüşmesi önizlemesi */
+			arka plan: rgb(var(--buttonStandard));
+			sınır yarıçapı: 5px !önemli;
+		}
+
+		/* Vurgulu */
+
+
+		/* Seçilmiş + Üzerine gelinmiş */
+
+
+		/* Seçildi */
+		.checkbox-1ycfTw .checkboxInner-1aRh1d .checkboxElement-uwAa9F:işaretli+aralık, /* Video görüşmesi önizlemesi */
+		.checkbox-f1HnKB .flexCenter_f6d9b0 .flex__909d4 .justifyCenter__4080c .alignCenter__84269 .box-BHImcZ .checked-1pZh2h[stil]{
+			arka plan: var(--os-accent-color, #4cc2ff) !important;
+			kenarlık: 1px katı var(--border);
+			filtre: doygunluk(var(--doygunluk-faktörü,1));
+		}
+			/* Onay işareti rengi */
+			.checkbox-f1HnKB .flexCenter_f6d9b0 .flex__909d4 .justifyCenter__4080c .alignCenter__84269 .box-BHImcZ .checked-1pZh2h > svg > yol{
+				doldur: rgb(var(--text)) !important;
+			}
+
+
+	/* Radyo düğmeleri */
+		/* Arka plan */
+		.item-2idW98, .item-2idW98 .radioBar-3w9XY-:hover, .item-2idW98 .radioBar-3w9XY-{ /* Ayarlar */
+			arka plan: şeffaf !önemli;
+			renk: rgb(var(--text));
+			sınır: yok;
+		}
+
+		/* Simge */
+			/* İç nokta */
+			.item-2idW98[aria-checked=true] .radioBar-3w9XY- .radioIconForeground-2BMavi{
+				renk: rgb(var(--text));
+			}
+			.item-2idW98[aria-checked=true] .radioBar-3w9XY-{
+				sınır yarıçapı: 3px 4px 4px 3px;
+				geçiş: 200ms;
+			}
+
+			/* Dış halka */
+
+
+
+	/* Geçiş anahtarları */
+		/* Konum */
+			.container__871ba, /* Anlaşmazlık */
+			.bd-switch-body{ /* Daha iyi anlaşmazlık */
+				yükseklik: 22 piksel;
+				genişlik: 44 piksel;
+			}
+			.container__871ba .slider__41d94, /* Anlaşmazlık */
+			.bd-switch-body .bd-switch-slider{ /* Daha iyi anlaşmazlık */
+				üst: -3 piksel;
+			}
+			.layer-1Ixpg3 .container__871ba .slider__41d94{ /* Anlaşmazlık */
+				üst: -2px;
+			}
+
+		/* Aç/kapat */
+			/* Arka plan */
+			.container__871ba.checked__6bdb0, /* Anlaşmazlık */
+			.bd-switch girişi:checked + .bd-switch-body{ /* Daha iyi uyumsuzluk */
+				arka plan: var(--os-accent-color, #4cc2ff) !important;
+			}
+
+			/* Simge */
+				/* Konum */
+				.control_f6cce7 doğru, /* Anlaşmazlık */
+				.bd-switch .bd-switch-body rect{ /* Daha iyi uyumsuzluk */
+					genişlik: 16 piksel;
+					yükseklik: 16 piksel;
+					transform: Translate(8px, 4px) !important;
+				}
+
+				/* Onay işareti */
+				.control_f6cce7 yol[doldur], /* Anlaşmazlık */
+				.bd-switch .bd-switch-body yolu{ /* Daha iyi anlaşmazlık */
+					doldur: şeffaf !önemli;
+				}
+
+		/* Kapat */
+			/* Konum */
+			.control_f6cce7 .slider__41d94[style*="left: -3px"] rect, /* Discord */
+			.bd-switch .bd-switch-body rect:not(.bd-switch input:checked + .bd-switch-body rect){ /* Daha iyi uyumsuzluk */
+				transform: Translate(0px, 3px) !important;
+			}
+
+			/* Arka plan */
+			.container__871ba:not(.checked__6bdb0), /* Anlaşmazlık */
+			.bd-switch .bd-switch-body:not(.bd-switch input:checked + .bd-switch-body){ /* Daha iyi anlaşmazlık */
+				arka plan: rgb(var(--contentDialogFooterHeader)) !important;
+				kenarlık: 1 piksel katı #a0a0a0;
+			}
+
+			/* Simge */
+			.control_f6cce7 .slider__41d94[style*="left: -3px"] rect, /* Discord */
+			.bd-switch .bd-switch-body rect:not(.bd-switch input:checked + .bd-switch-body rect){ /* Daha iyi uyumsuzluk */
+				doldur: rgb(var(--toggleSwitchOffIcon)) !important;
+			}
+
+
+		/* Fareyle üzerine gelmeyi değiştir */
+
+
+		/* Seçileni değiştir */
+
+
+
+	/* Vurgu düğmeleri */
+		/* Standart */
+		.lookFilled__19298, /* Anlaşmazlık */
+		.bd-button.bd-button-title, .bd-button.bd-view-button.selected, /* Daha iyi discord */
+		.button-coQXfM[style="background: var(--bdfdb-blurple);"]{ /* DevilBro tarafından hazırlanan BD Plugin + Themes deposu */
+			arka plan: var(--os-accent-color, #4cc2ff) !important;
+			kenarlık: 2px katı var(--border) !important;
+			sınır yarıçapı: 4px !önemli;
+			color: rgb(var(--text)) !important;
+			ızgara: 2/3;
+		}
+			/* Forum stilleri */
+			.sortDropdownInner-1kHAUi,
+			.sortDropdownText-3smleu{
+				color: rgb(var(--text)) !important;
+			}
+
+		/* Vurgulu */
+		.lookFilled__19298:hover, /* Anlaşmazlık */
+		.bd-button.bd-button-title:hover, .bd-button.bd-view-button.selected:hover, /* Daha iyi anlaşmazlık */
+		.button-coQXfM[style="background: var(--bdfdb-blurple);"]:hover{ /* BD Plugin + Themes repo by DevilBro */
+			filtre: parlaklık (%90);
+			geçiş: var(--colorTransition) !important;
+		}
+
+
+	/* Diğer eylem düğmeleri */
+		/* Standart */
+		.barButtonAlt__4b48f.barButtonBase__8fa46, /* Bilgi çubuğu: Okundu olarak işaretle */
+		.lookOutlined-3yKVGo{
+			dolgu: 16 piksel 12 piksel 16 piksel 12 piksel;
+			arka plan: rgb(var(--buttonStandard));
+			kenarlık: 1px katı rgb(var(--buttonBorder));
+			kenarlık yarıçapı: 6px;
+			color: rgb(var(--text)) !important;
+		}
+		.barButtonIcon__907ef{ /* Okundu simgesi olarak işaretle */
+			görüntü yok;		
+		}
+
+
+		/* Vurgulu */
+		.lookOutlined-3yKVGo:hover{
+			arka plan: rgb(var(--buttonHover));
+		}
+
+
+	/* Hiper bağlantılar */
+		/* Standart */
+		.anchorUnderlineOnHover__78236[href^="http"], /* Ayarlar: Erişilebilirlik */
+		.anchorUnderlineOnHover-2qPutX:not(.imageWrapper_fd6587),
+		.lookLink-15mFoz{
+			dolgu: 2 piksel;
+			kenarlık yarıçapı: 6px;
+			color: var(--os-accent-color, #4cc2ff) !important;
+			opaklık: 1 !önemli;
+			satır yüksekliği: normal !önemli;
+		}
+
+		/* Vurgulu */
+		.anchorUnderlineOnHover__78236:hover, /* Ayarlar: Erişilebilirlik */
+		.anchorUnderlineOnHover-2qPutX:not(.imageWrapper_fd6587):hover,
+		.lookLink-15mFoz:hover{
+			arka plan: rgb(var(--buttonHover)) !important;
+			metin dekorasyonu: yok !önemli;
+			geçiş: var(--colorTransition) !important;
+		}
+
+
+	/* Kaydırıcılar */
+		/* Konum */
+		.slider-1NC-Gf{
+			genişlik: %97;
+			kenar boşluğu: 0 piksel 12 piksel;
+		}
+
+		/* Kavrayıcı */
+			/* Standart */
+			.grabber-2GQyvM{
+				yükseklik: 18 piksel;
+				genişlik: 18 piksel;
+				sınır yarıçapı: %100;
+				üst kenar boşluğu: 0 piksel;
+				üst: %48,5;
+				sol kenar boşluğu: -9px !önemli;
+				arka plan: var(--os-accent-color, #4cc2ff); /* merkez rengi: fareyle üzerine gelindiğinde daha büyük */
+				kenarlık: 5px katı #494949 !önemli;
+			}
+
+			/* Vurgulu */
+			.grabber-2GQyvM:hover{
+				kenarlık: 3px katı #494949 !önemli;
+				geçiş: kenarlık 0,3'lük kolaylaştırma, renkli 0,3'lük kolaylaştırma;
+			}
+
+		/* İzlemek */
+		.bar-1Bhnl9{
+			üst: 18 piksel;
+			yükseklik: 4 piksel;
+		}
+			/* Önden doldurma */
+			.barFill-2Bh7CX{
+				arka plan: var(--os-accent-color, #4cc2ff);
+			}
+
+			/* Geri doldur */
+			.theme-dark .bar-1Bhnl9{
+				arka plan: #9F9F9F !önemli;
+			}
+			.theme-light .bar-1Bhnl9{ /* İnceleme: light */
+				arka plan: #3d3d3d !önemli;
+			}
+
+
+	/* Açılan kutu */
+		
+
+
+	/* Metin girişleri */
+		/* Konum */
+		.notranslate .public-DraftEditor-içerik,
+		.search__07df0{
+			konum: sabit;
+			kenar boşluğu: 0px !önemli;
+			üst: 78 piksel;
+			yazı tipi: miras;
+			yazı tipi ağırlığı: 400 !önemli;
+			yazı tipi boyutu: 14 piksel !önemli;
+			yazı tipi stili: miras !önemli;
+			z-endeksi: 11 !önemli;
+		}
+			/* Metin */
+			.fontSize16Padding__48818{ /* Mesaj girişi */
+				dolgu üst: 2px !önemli;
+			}
+			.inputDefault__80165.input-2g-os5, /* Sunucu ayarları: Roller */
+			.input__74754, /* DevilBro'nun hazırladığı BD Eklentisi + Temalar deposu */
+			.search-25t1e9 .searchBox-31Zv9h .searchBoxInput-3h4etz{ /* Keşif ana sayfası */
+				dolgu: 0px !önemli;
+			}
+
+			/* Formlar: Başlık/Arama */
+			.inputWrapper__934f5{
+				dolgu: 0px !önemli;
+			}
+			.title-1v5ZfI{
+				kenar boşluğu: 0px !önemli;
+			}
+
+			/* Formlar: Mesaj */
+			.sansAttachButtonCreatePost_cfab47{
+				üst kenar boşluğu: 12 piksel;
+			}
+			.channelTextArea-3xG1BQ, .channelTextAreaInner-2_mflx{
+				minimum yükseklik: 0px !önemli;			
+			}
+
+			/* Formlar: Dosya yükleme */
+			.container-3Om6RL{
+				üst kenar boşluğu: 4 piksel;
+				sol kenar boşluğu: 12 piksel;
+			}
+
+			/* Ayarlar: Hediye envanteri */
+			.inputDefault__80165{
+				dolgu: 4 piksel !önemli;
+				yükseklik: 32 piksel;
+			}
+
+
+		/* Boyut */
+		.inputWrapper__934f5, /* Sunucu Ayarları: Sunucu adı - Forumlar: Ara/yeni */
+		.note-3M15gE, /* Tam kullanıcı profili: Notlar */
+		.note_ba0c31, /* Mini kullanıcı profili: Notlar */
+		.inputDefault__80165.input-2g-os5.input-3AAlUz, /* Özel durum */
+		.inputDefault__80165.input-2g-os5.input__95bc4, /* Mini kullanıcı profili: Kullanıcıya mesaj gönder */
+		.addFriendInput__568d8, /* Ana Sayfa: Arkadaş ekle */
+		.input__72d38, /* Ayarlar: Anahtar bağlamaları */
+		.root_a28985 .input-2g-os5[name='invite'], /* Sunucu viewModal bağlantısına davet et */
+		.textArea__74543.textAreaSlate_e0e383.slateContainer_b692b3, /* Mesajlar: Mesaj kutusu */
+		.container_e4c233, /* Çıkartma sayfası */
+		.notranslate .public-DraftEditor-content{
+			genişlik: 244px !önemli;
+			yükseklik: maksimum içerik;
+			minimum yükseklik: 32 piksel !önemli;
+			dolgu: 4 piksel;
+			sol dolgu: 8px !önemli;
+			kenarlık yarıçapı: 6px !önemli;
+			kenarlık: 1px katı var(--border);
+		}
+			/* Genişlik düzeltmesi */
+			.note-3M15gE, /* Tam kullanıcı profili: Not */
+			.textArea__74543.textAreaSlate_e0e383.slateContainer_b692b3, /* Mesaj kutusu */
+			.container_e4c233{ /* Çıkartma sayfası */
+				genişlik: %100 !önemli;
+				dolgu: 0px !önemli;
+			}
+				/* Özel durum */
+				.input-3AAlUz{
+					dolgu: 0px !önemli;
+				}
+				.inputWrapper__934f5{
+					genişlik: %95 !önemli;
+				}
+
+
+		/* Seçilmemiş */
+		.note-3M15gE, /* Tam kullanıcı profili: Notlar */
+		.note_ba0c31, /* Mini kullanıcı profili: Notlar */
+		.inputWrapper__934f5, /* Sunucu Ayarları: Sunucu adı - Forumlar: Ara/yeni */
+		.inputDefault__80165.input-2g-os5.input-3AAlUz, /* Özel durum */
+		.inputDefault__80165.input-2g-os5.input__95bc4, /* Mini kullanıcı profili: Kullanıcıya mesaj gönder */
+		.searchBar_e0c60b, /* Konuşma arama çubuğu */
+		.addFriendInput__568d8, /* Ana Sayfa: Arkadaş ekle */
+		.input__72d38, /* Ayarlar: Anahtar bağlamaları */
+		.textArea__74543, /* Mesajlar: Mesaj kutusu */
+		.root_a28985 .input-2g-os5[name='invite'], /* Sunucu viewModal'ı ekle */
+		.container_e4c233, /* Çıkartma sayfası */
+		.pageWrapper_fef757 .searchBox-31Zv9h, /* Keşif ana sayfası */
+		.bd-search-wrapper, /* BD Eklentisi + Tema seçici */
+		.inner__999f6, /* BD Eklentisi + Tema deposu */
+		.searchBar_e4ea2a .searchBarComponent__22760,
+		.search-1FM8Qc .searchBar_e0c60b,
+		.libraryFilter_c21584,
+		.browseSearch-e9jF-f .searchBar-s2JxlI{
+			arka plan: rgb(var(--textboxStandard)) !important;
+			kenarlık: 1px katı var(--border) !important;
+			kenarlık-alt: 1 piksel düz #9C9C9C !önemli;
+		}
+			/* Metin + simge rengi */
+			.searchBar_e4ea2a .searchBarComponent__22760{
+				renk: #AEAEAE !önemli;
+				yazı tipi ağırlığı: 400 !önemli;
+				yazı tipi stili: normal !önemli;
+				doldur: #AEAEAE !önemli;
+			}
+
+		/* Vurgulu */
+		.note-3M15gE:hover, /* Tam kullanıcı profili: Notlar */
+		.note_ba0c31:hover, /* Mini kullanıcı profili: Notlar */
+		.inputWrapper__934f5:hover, /* Sunucu Ayarları: Sunucu adı - Forumlar: Ara/yeni */
+		.inputDefault__80165.input-2g-os5.input-3AAlUz: üzerine gelin, /* Özel durum */
+		.searchBar_e0c60b:hover, /* Kenar çubuğu araması */
+		.addFriendInput__568d8:hover, /* Ana Sayfa: Arkadaş ekle */
+		.input__72d38:hover, /* Ayarlar: Tuş bağlantıları */
+		.inputDefault__80165.input-2g-os5.input__95bc4:hover, /* Mini profil: Kullanıcıya mesaj gönder */
+		.textArea__74543:hover, /* Mesajlar: Mesaj kutusu */
+		.root_a28985 .input-2g-os5[name="davet"]:hover, /* Sunucu viewModal'ı ekle */
+		.container_e4c233:hover, /* Çıkartma sayfası */
+		.pageWrapper_fef757 .searchBox-31Zv9h:hover, /* Keşif ana sayfası */
+		.bd-search-wrapper:hover, /* BD Eklentisi + Tema seçici */
+		.inner__999f6:hover, /* BD Eklentisi + Tema deposu */
+		.privateChannels__93473 .searchBar_e4ea2a .searchBarComponent__22760:hover,
+		.libraryFilter_c21584 .searchBar__1cca4:hover,
+		.browseSearch-e9jF-f .searchBar-s2JxlI:hover{
+			arka plan: rgb(var(--textboxHover)) !important;
+		}
+
+		/* Seçildi */
+		.note-3M15gE:focus-in, /* Tam kullanıcı profili: Notlar */
+		.note_ba0c31:focus-in, /* Mini kullanıcı profili: Notlar */
+		.inputWrapper__934f5:focus-within, /* Sunucu Ayarları: Sunucu adı - Forumlar: Ara/yeni */
+		.inputDefault__80165.input-2g-os5.input-3AAlUz:focus-within, /* Özel durum */
+		.searchBar_e0c60b:focus-in, /* Kenar çubuğu araması */
+		.addFriendInput__568d8:focus-within, /* Ana Sayfa: Arkadaş ekle */
+		.input__72d38:focus-within, /* Ayarlar: Tuş bağlantıları */
+		.inputDefault__80165.input-2g-os5.input__95bc4:focus-within, /* Mini profil: Kullanıcıya mesaj gönder */
+		.textArea__74543:focus-within, /* Mesajlar: Mesaj kutusu */
+		.root_a28985 .input-2g-os5[name="davet"]:focus-within, /* Sunucu viewModal'ı ekle */
+		.container_e4c233:içine odaklan, /* Çıkartma sayfası */
+		.pageWrapper_fef757 .searchBox-31Zv9h:focus-within, /* Keşif ana sayfası */
+		.bd-search-wrapper:focus-within, /* BD Eklentisi + Tema seçici */
+		.inner__999f6:focus-within, /* BD Eklentisi + Tema deposu */
+		.container__11d72 .searchBar_e0c60b .searchFilter__118cb,
+		.container__11d72 .searchBar_e0c60b .searchAnswer_b452e7,
+		.focused-8aNhVB .searchBar_e0c60b, .open-3y3yI_ .searchBar_e0c60b,
+		.odaklı__60a69,
+		.focused-20l6Zp{
+			arka plan: rgb(var(--textboxSelected)) !important;
+			border-bottom: 2px katı var(--os-accent-color, #4cc2ff) !important;
+		}
+			/* Metin + simge rengi */
+			.input__72d38:focus-within, /* Ayarlar: Tuş bağlantıları */
+			.focused-8aNhVB .iconContainer__8fa9c > svg > yol,
+			.focused-8aNhVB .searchBar_e0c60b, .open-3y3yI_ .searchBar_e0c60b .DraftEditor-root .public-DraftEditorPlaceholder-root{
+				renk: #8B8B8B !önemli;
+				yazı tipi ağırlığı: 400 !önemli;
+				yazı tipi stili: normal !önemli;
+				doldur: #8B8B8B !önemli;
+			}
+
+
+	/* İçerik menüsü */
+		/* Arka plan */
+		.menu_dc52c6:değil(.menu__5cf7f),
+		.submenu_acf564{
+			yükseklik: 384px !önemli;
+			genişlik: 256px !önemli;
+			arka plan: rgb(var(--contextBackground), 0.8);
+			zemin filtresi: bulanıklık(24px) !önemli;
+			kenarlık: 1px katı var(--border);
+		}
+
+		/* Alt menülerin konumunu sabitle */
+		.submenuPaddingContainer__12a9d{
+			konum: sabit;
+			sağ: -256 piksel;
+			üst: 0px !önemli;
+		}
+		.scroller__750f5{
+			dolgu: 6 piksel !önemli;
+		}
+			/* Profilinizin düzeltilmesi */
+			.submenu-1apzyU.menu__5cf7f[aria-activedescendant="account-status-picker"],
+			.submenu-1apzyU.menu__5cf7f[aria-activedescendant="account-status-picker--online"],
+			.submenu-1apzyU.menu__5cf7f[aria-activedescendant="account-status-picker--idle"],
+			.submenu-1apzyU.menu__5cf7f[aria-activedescendant="account-status-picker--dnd"],
+			.submenu-1apzyU.menu__5cf7f[aria-activedescendant="account-status-picker--invisible"],
+			.submenu-1apzyU.menu__5cf7f[aria-activedescendant='account-switch-account'],
+			.submenu-1apzyU.menu__5cf7f[aria-activedescendant="account-switch-account--manage-accounts"]{
+				sağ: -100px !önemli;
+			}
+			.activeIcon_e452f7{
+				kenar boşluğu: 0 piksel;
+			}
+			
+			/* Kaydırma çubuğu */
+			.scroller-1bVxF5.thin_b1c063.scrollerBase-_bVAAt{
+				taşma-y: kaydır !önemli;
+				taşma-x: gizli !önemli;
+			}
+
+		.item__183e8 .labelContainer_bc2861 .colorDefault__0b482{
+			kenarlık yarıçapı: 4px;
+		}
+		
+		/* Metin + simge hizalaması */
+			.iconContainer__829e7{
+				sağ kenar boşluğu: 4 piksel;
+			}
+
+			.menu_dc52c6 .labelContainer_bc2861{
+				dolgu: 0px !önemli;
+				yazı tipi ağırlığı: 400;
+				yazı tipi boyutu: 14 piksel !önemli;
+			}
+			.menu_dc52c6 .labelContainer_bc2861:not(.iconContainer__829e7:has(.caret_ce50ce)){
+				esnek yön: satır tersi;
+			}
+			.imageContainer_ea60f4{
+				sol kenar boşluğu: 0px !önemli;
+				sağ kenar boşluğu: 8 piksel;
+			}
+
+			.menu_dc52c6 .colorDefault__0b482.focused__27621,
+			.menu_dc52c6 .colorDefault__0b482:active:not(.hideInteraction-2jPGL_){
+				arka plan: rgb(var(--sidebarButtonHover));
+				kenarlık yarıçapı: 4px;
+			}
+			.separator-1So4YB{
+				kenar boşluğu: 3 piksel;
+				sol kenar boşluğu: 12 piksel;
+				sağ kenar boşluğu: 12 piksel;
+				kenarlık: 1px katı var(--border);
+			}
+
+
+	/* İçerik iletişim kutusu */
+		/* Arka plan */
+		.backdrop__7e89b{
+			yükseklik: %100;
+			arka plan: rgb(var(--contentDialogBackdrop)) !important;
+			geçiş: opaklık 500 ms doğrusal;
+			opaklık: 1 !önemli;
+			z-endeksi: 0 !önemli;
+		}
+
+
+		/* Arka plan */
+			/* İçerik */
+			.header__6d5ea, .content__764ce, /* Özel durum */
+			.keyboardShortcutsModal__74c71, /* Klavye yardım sayfası */
+			.bd-error-modal-header, .bd-error-modal-content, /* Daha iyi anlaşmazlık */
+			.scroller__5c5df.thin_b1c063.scrollerBase-_bVAAt.fade-1R6FHN, /* DM'ler: Arkadaşları gruba ekleyin */
+			.topSection-13QKHs, .body-1Ukv50, /* Tam kullanıcı profili */
+			.reactors__20ab0, /* Kullanıcı tepkisi */
+			.modalSize-3WSXDU{ /* Ekranı paylaş */
+				arka plan: rgb(var(--contentDialogContent)) !important;
+			}
+
+			/* Üstbilgi Altbilgi */
+			.footer__89240, /* Özel durum */
+			.bd-error-modal-footer, /* Daha iyi uyumsuzluk */
+			.scroller__5fda0, /* Kullanıcı tepkisi */
+			.header-1zd7se,
+			.footer-31IekZ{
+				arka plan: rgb(var(--contentDialogFooterHeader)) !important;
+			}
+				/* Özel durum */
+				.header-VCOMen{
+					üst dolgu: 0px;
+				}
+
+				/* Ayırıcı */
+				.separator__18122, /* Özel durum */
+				.separator__925e8{
+					görüntü yok;
+				}
+
+
+		/* Animasyon */
+			/* Yakınlaştır */
+			.katman-1Ixpg3{
+				animasyon: contentDialogZoomIn 0,2s doğrusal !önemli;
+			}
+			/* Uzaklaştır */
+			.katman-1Ixpg3{
+				animasyon: contentDialogZoomOut 0,2s doğrusal !önemli;
+			}
+
+
+		/* Daha iyi uyumsuzluk derleme hatası */
+			/* Kart */
+			.bd-addon-hatası{
+				arka plan: rgb(var(--contentDialogContent));
+				kenarlık: var(--border);
+			}
+				/* Simge */
+				.bd-addon-hata-simgesi,
+				.bd-tab-item.selected{
+					arka plan: var(--os-accent-color, #4cc2ff);
+				}
+				.bd-addon-hata-simgesi svg{
+					doldur: #FFFFFF;
+				}
+				/* Hata yığın izlemesi */
+					/* Arka plan */
+					.bd-addon-error-standardck kodu{
+						arka plan: rgb(var(--backgroundTint));
+						sınır: yok;
+					}
+		
+
+		/* Kullanıcı tepkisi */
+			/* Kenar çubuğu */
+			.scroller__5fda0{
+				dolgu: 4 piksel !önemli;
+			}
+
+			/* Kullanıcılar */
+				/* İsim */
+				.discriminator__18879{
+					color: rgb(var(--text)) !important;
+				}
+				.tagFaded_b91881{
+					opaklık: 1 !önemli;
+					sol dolgu: 18px;
+				}
+
+				/* Arka plan */
+				.content__23cab,
+				.üyeler__9f47b{
+					arka plan: şeffaf !önemli;	
+				}
+
+
+	/* Döndürücü Yükleniyor */
+	.spinner_f931ee:sonra {
+		arka plan görüntüsü: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-loading.gif?raw=true');
+		arka plan boyutu: kapak;
+		genişlik: 32px !önemli;
+		yükseklik: 32px !önemli;
+		içerik: "";
+	}
+		/* Arama düzeltmeleri */
+		.spinner_f931ee.spinningCircle__351b3.spinner__39a47{
+			genişlik: %200;
+			sol kenar boşluğu: 24 piksel;
+		}
+
+	
+	/* Kenar çubuğu düğmeleri */
+		/* Konum */
+		.wrappedLayout_fd7073, /* Sayfayı keşfet */
+		.privateChannelsHeaderContainer_ddcec6, /* DM kategorileri */
+		.channel_c21703, /* DM kullanıcıları */
+		.wrapper__9c483, /* Sunucu kategorileri */
+		.wrapper__7bcde{ /* Sunucu kanalı */
+			kenar boşluğu: 1 piksel 4 piksel !önemli;
+		}
+		.privateChannelsHeaderContainer_ddcec6 .headerText__051c0, /* DM kategorileri */
+		.linkTop_eaa673 .iconContainer__3f9b0{ /* Sunucu kanalları */
+			sol kenar boşluğu: 32 piksel;
+			sağ kenar boşluğu: 18 piksel;
+		}
+		.interactive__776ee{
+			yükseklik: 32 piksel;
+		}
+			/* DM kullanıcıları */
+			.pinned-0lM4wD > .interactive__776ee{
+				sol dolgu: 38px;
+			}
+				/* Avatarı */
+				.avatar__7bd22{
+					dönüşüm: ölçek(0,9);
+				}
+
+			/* Sayfa simgelerini keşfedin */
+			.itemInner__9e755 > .avatar__6337f{
+				sol kenar boşluğu: 14 piksel;
+			}
+				
+			/* İş Parçacığı */
+				/* Simge */
+				.spineBorder_bdec8b,
+				.spine__88e6d{
+					sol kenar boşluğu: 40 piksel;
+				}
+
+				/* Metin */
+				.typeThread__2f91c.wrapper__7bcde{
+					sol kenar boşluğu: 78 piksel;
+				}
+
+
+		/* Boyut */
+			/* DM kategorisi */
+			.privateChannelsHeaderContainer_ddcec6{
+				yükseklik: 36 piksel;
+				dolgu: 0px;
+				üst dolgu: 10 piksel;
+			}
+
+			/* DM kullanıcıları */
+			.channel_c21703{
+				maksimum genişlik: var(--sidebarWidth);
+			}
+			ul[class="membersWrap__90226"]{
+				yükseklik: minimum içerik !önemli;
+				alt dolgu: 4 piksel;
+			}
+
+			/* Sunucu kategorisi */
+			.wrapper__9c483{
+				dolgu: 16 piksel !önemli;
+				sol dolgu: 46 piksel !önemli;
+			}
+
+			/* Sunucu kanalı */
+			.wrappedLayout_fd7073, /* Sayfayı keşfet */
+			.wrapper__7bcde{ /* Sunucu kanalları */
+				dolgu: 0px;
+			}
+
+			/* Sunucu kullanıcıları */
+			.layout_bb8e67{
+				yükseklik: 32px !önemli;
+			}
+			.avatar__6337f{
+				dönüşüm: ölçek(0,9);
+			}
+
+
+		/* Ok animasyonu */
+		.pinnedChannelsHeaderArrow-44rrTz{ /* DM kategorileri */
+			geçiş: 75 ms doğrusal;
+		}
+
+
+		/* Sınır */
+		.privateChannelsHeaderContainer_ddcec6, /* DM kategorileri */
+		.container-32HW5s, /* DM kullanıcısı */
+		.wrapper__9c483, /* Sunucu kategorileri */
+		.wrapper__7bcde{ /* Sunucu kanalı */
+			kenarlık yarıçapı: 6px !önemli;
+		}
+
+
+		/* Vurgulu */
+		.reactionDefault__792ef:hover, /* Kullanıcı tepkisi */
+		.container-q97qHp:hover, /* DM kategorileri */
+		.interactive_a868bc:hover, /* DM kullanıcısı */
+		.wrapper__9c483:hover, /* Sunucu kategorileri */
+		.wrapper__7bcde:hover .wrapper__7bcde{ /* Sunucu kanalı */
+			arka plan: rgb(var(--sidebarButtonHover));
+		}
+
+
+		/* Seçilmiş + Üzerine gelinmiş */
+		.reactionSelected__249a7:hover, /* Kullanıcı tepkisi */
+		.interactive_a868bc.selected_d94cf9:hover:focus-in, /* DM kullanıcısı */
+		.container-q97qHp:hover:focus-in, /* DM kategorileri */
+		.wrapper__9c483:hover:focus-within, .modeSelected__487d6:hover .wrapper__7bcde, /* Sunucu kategorileri */
+		.wrapper__7bcde:hover:focus-within .wrapper__7bcde{ /* Sunucu kanalı */
+			arka plan: rgb(var(--sidebarButtonSelectedHover)) !important;
+		}
+
+
+		/* Seçildi */
+		.reactionSelected__249a7, /* Kullanıcı tepkisi */
+		.interactive_a868bc.selected_d94cf9, /* DM kullanıcısı */
+		.container-q97qHp:focus-içeride, /* DM kategorileri */
+		.wrapper__9c483:focus-in, /* Sunucu kategorileri */
+		.modeSelected__487d6 .wrapper__7bcde{ /* Sunucu kanalı */
+			arka plan: rgb(var(--sidebarButtonHover));
+		}
+
+
+		/* Yan vurgu */
+			/* Konum */
+				/* DM'ler */
+				.selected-3veCBZ:sonra{
+					konum: mutlak;
+					yükseklik: 16 piksel;
+					sınır yarıçapı: %25;
+					kenarlık-sol: 3px katı var(--os-accent-color, #4cc2ff);
+					içerik: "";
+				}
+
+				/* Sunucu kanal listesi */
+				.categoryItem_b1be5c:sonra, .wrapper__7bcde:sonra{
+					içerik: "";
+					kenarlık-sol: şeffaf
+				}
+				.channel_c21703:sonra, .containerDefault__3187b .wrapper__7bcde:sonra{
+					konum: mutlak;
+				}
+				.modeSelected__487d6::after, /* Sunucu kanalı */
+				.selectedCategoryItem__0bf4c::after{
+					konum: sabit;
+					arka plan: var(--os-accent-color, #4cc2ff);
+					yükseklik: 16 piksel;
+					genişlik: 4 piksel;
+					sınır yarıçapı: %25;
+					üst kenar boşluğu: -24 piksel;
+					sol kenar boşluğu: 32 piksel;
+				}
+					/* Konular/formlar */
+					.typeThread__2f91c.modeSelected__487d6::after{
+						sol kenar boşluğu: 0px !önemli;
+					}
+
+
+				/* Sunucu ayarları: Şablon */
+				.dot__99c90{
+					konum: sabit;
+					genişlik: 4 piksel;
+					yükseklik: 18 piksel;
+					sol: 122 piksel;
+					arka plan: rgb(var(--okunmamış)) !important;
+				}
+
+
+			/* Vurgulu */
+			.item_f9d377[style*="height: 20px"] /* Sunucu çubuğu */{
+				arka plan: rgb(var(--buttonHover)) !important;
+			}
+
+
+			/* Seçildi */
+			.channel_c21703.selected__9800b:before, .modeSelected__487d6::before, .selectedCategoryItem__0bf4c::before{ /* Kanal öğesi */
+				border-color: var(--os-accent-color, #4cc2ff) !important;
+			}
+
+
+	/* Sekme seçimini vurgula */
+	.ui-tab-bar-item.selected{
+		kenarlık: 3 piksel düz #FFFFFF !önemli;
+	}
+
+
+
+/* 2. Ana pencere --------------------------------- -------------------------------------------------- ------ */
+	/* Yazı tipi */
+	::-webkit-giriş-yer tutucu, gövde, düğme, giriş, seç, textarea {
+		font-family: "Segoe UI" !important;
+	}
+
+
+	/* Çevrimdışıyken discord'un yüklenmesini sağla */
+		/* Arka plan */
+		.container__4bde3{
+			yükseklik: 60 piksel;
+			üst kenar boşluğu: 88 piksel;
+			arka plan: şeffaf !önemli;
+		}
+
+		/* Discord merkezi mesajı */
+		.container__4bde3 > div{
+			görüntü yok;
+		}
+
+		/* Özel çevrimdışı mesaj */
+		.container__4bde3::önce{
+			konum: mutlak;
+			genişlik: calc(100% - var(--sidebarWidth) - var(--userpopoutWidth) - 124px);
+			sol: 412 piksel;
+			dolgu: 11 piksel;
+			sol dolgu: 48px;
+			arka plan: rgb(var(--infobarError));
+			kenarlık yarıçapı: 4px;
+			renk: #fff;
+			content: "Discord'a bağlanılamıyor, internet bağlantınızı kontrol edin.";
+		}
+			@media yalnızca ekran ve (maks. genişlik: 1200 piksel){
+				.container__4bde3::önce{
+					genişlik: calc(100% - var(--sidebarWidth) - 156px) !important;
+				}
+			}
+
+
+	/* Başlık çubuğu */
+		/* Konum */
+		.container__037ed:not(div>div>div>div[class="wrapper_bd2abe fullScreen__5263c video__85ac2"]){
+			üst kenar boşluğu: 40 piksel !önemli;
+		}
+		.withFrame__485f4, .titleBar__01af6{
+			yükseklik: 8 piksel;
+			kenar boşluğu: 0 piksel;
+			arka plan: rgb(var(--backgroundTitlebar));
+		}
+		.wordmark__0d178{
+			dolgu: 0px !önemli;
+		}
+		.wordmark__0d178 > svg > g{
+			doldur: şeffaf !önemli;
+		}
+
+
+		/* Sınır */
+		.base__3e6af{
+			kenarlık-üst-sol-yarıçap: 10px;
+			border-top: 1px katı rgb(var(--borderTitlebar));
+			kenarlık-sol: 1px katı rgb(var(--borderTitlebar));
+		}
+
+
+		/* Bulmak */
+		.resizeHandle_f1a098{
+			genişlik: 8px !önemli;
+			arka plan: rgb(var(--backgroundTitlebar));
+		}
+
+
+		/* Filigran */
+			/* Simge */
+			.wordmark__0d178:önce{
+				konum: mutlak;
+				genişlik: 24px !önemli;
+				yükseklik: 24px !önemli;
+				kenar boşluğu: 16 piksel 0 piksel 0 piksel 18 piksel;
+				sol: 0 piksel;
+				üst: 0 piksel;
+				arka plan: url('https://discord.com/assets/9f6f9cd156ce35e2d94c0e62e3eff462.png') center/19px tekrarlama yok;
+				içerik: '';
+			}
+				/* Işık modu */
+				.theme-light .wordmark__0d178:önce{
+					arka plan: url('https://discord.com/assets/ca03beabe94d8f97ba6fbf75cbb695c4.png') center/19px tekrarlama yok !important;
+				}
+
+			/* Metin */
+			.wordmark__0d178:sonra{
+				konum: mutlak;
+				üst: 21 piksel;
+				sol: 61 piksel;
+				içerik: "Uyuşmazlık";
+				renk: rgb(var(--text));
+				yazı tipi boyutu: 13 piksel;
+				yazı tipi ağırlığı: 400;
+			}
+
+
+		/* Arama çubuğu */
+			/* Konum */
+			.searchBar_e0c60b, /* Kullanıcı/kanal */
+			.searchBox-31Zv9h, /* Keşif */
+			.searchBar_e4ea2a, .searchBarComponent__22760{ /* Arkadaşlar */
+				konum: sabit !önemli;
+				yükseklik: 32px !önemli;
+				genişlik: %31,25 !önemli;
+				sol: calc(%50 - %15,625) !önemli;
+				üst: 8 piksel;
+				z-endeksi: 100 !önemli;
+			}
+				/* BD Eklentisi: BDteam'in genel sunucuları */
+				.bd-arama-sarıcı{
+					üst: 8 piksel;	
+				}
+				/* Arkadaş listesi */
+				.searchBar_ff8800{
+					kenar boşluğu: 6 piksel 12 piksel !önemli;
+					kenarlık yarıçapı: 6px;
+				}
+
+			/* Metin */
+			.DraftEditor-editorContainer{
+				yükseklik: %95 !önemli;
+				genişlik: %100 !önemli;
+			}
+				/* Yer tutucu */
+				.search_ac353c .DraftEditor-root .public-DraftEditor-içerik,
+				.search_ac353c .DraftEditor-root .public-DraftEditorPlaceholder-root{
+					dolgu: 0px;
+					üst dolgu: 4 piksel;
+					sol dolgu: 8px;
+					yazı tipi ağırlığı: 100;
+					yazı tipi boyutu: 14 piksel;
+					renk: rgb(var(--text));
+					opaklık: 0,7;
+				}
+
+			/* Simge */
+			.icon__46425{
+				üst kenar boşluğu: 4 piksel;
+				sağ kenar boşluğu: 4 piksel;
+				dönüşüm: ölçek(0,8);
+			}
+			.icon_f50f05 > yol{
+				renk: rgb(var(--text));	
+			}
+
+			/* Alt menü: Arama seçenekleri */
+				/* Konum */
+				.layer_ec16dd[style^="konum: mutlak; üst: 86 piksel; sol"]{
+					genişlik: %100;
+					üst: 40 piksel !önemli;
+					sol: 0px !önemli;
+				}
+				.container_d6dad3{
+					genişlik: %31,25 !önemli;
+					kenar boşluğu: 0 otomatik;
+					sınır yarıçapı: 0px 0px 12px 12px;
+					arka plan: rgb(var(--contextBackground), 0.8) !important;
+					zemin filtresi: bulanıklaştırma (16 piksel);
+				}
+					.queryContainer_c359fe{
+						görüntü: yok !önemli;
+					}
+			
+
+
+		/* Kullanıcı hesabı */
+			/* Konum */
+			.container_ca50b9{
+				konum: sabit;
+				üst: 23 piksel;
+				sağ: 196 piksel;
+				arka plan: şeffaf !önemli;
+			}
+
+			/* Simge */
+				/* Konum */
+				.avatar_f8541f{
+					kenar boşluğu: 0 piksel;
+					üst kenar boşluğu: -48px;
+					dolgu: 0px;
+					sol: 111 piksel;
+					dönüşüm: ölçek(0,9);
+				}
+
+				/* Vurgulu */
+				.avatar_f8541f:üzerine gelin{
+					dönüşüm: ölçek(0,85);
+					geçiş: 100 ms'lik giriş-çıkış kolaylığı;
+					opaklık: 1 !önemli;
+				}
+			
+
+			/* Senin profil */
+				/* Konum */
+				#durum seçici{
+					maksimum yükseklik: 200 piksel;
+					üst kenar boşluğu: -10px;
+					dolgu üst: 32 piksel !önemli;
+				}
+				.avatarWrapper_ba5175:hover{
+					arka plan: şeffaf !önemli;
+				}
+					/* İsim */
+					.headerTop-3GPUSF.copiableNameTag-3f6roa{
+						üst kenar boşluğu: 48 piksel;
+						dolgu: 8 piksel 21 piksel;
+					}
+					/* Çalmakta */
+					.bodyInnerWrapper-2bQs1k{
+						arka plan: şeffaf !önemli;
+						dolgu: 0 piksel 8 piksel;
+					}
+
+				/* Etkinlik durumu simgeleri */
+					/* Boyut */
+					.icon_a65286{
+						sol kenar boşluğu: 2 piksel;
+						dönüşüm: ölçek(1.6);
+					}
+
+					/* Metin */
+						/* Renk */
+						.styleFixed-2_NfVL .status__0fce8{
+							renk: #ffffff;
+							yazı tipi boyutu: 14 piksel;
+						}
+
+						/* Tanım */
+						.description__76091{
+							görüntü yok;
+						}
+				
+				/* Durum butonu */
+				#account-set-custom-status>.label__73cb9{
+					renk: şeffaf;
+				}
+				#account-set-custom-status>.label__73cb9::before{
+					content:"Durumu ayarla";
+					renk: rgb(var(--text));
+				}
+
+				/* Özel durum */
+					/* İçerik dolgusu */
+					.sectionTitle-3j2YI1{
+						üst kenar boşluğu: 8 piksel;
+					}
+						
+					/* İfade düğmesi */
+					.emojiButtonContainer-gCE6AT{
+						sol kenar boşluğu: 348 piksel !önemli;
+					}
+					.emojiButtonContainer-gCE6AT .sprite__294b3{
+						yükseklik: 22 piksel !önemli;
+						genişlik: 22px !önemli;
+					}
+
+
+		/* Pencere kontrol düğmeleri */
+			/* Konum */
+			.titleBar__01af6>*:nth-child(2),
+			.titleBar__01af6>*:nth-child(3),
+			.titleBar__01af6>*:nth-child(4){
+				üst kenar boşluğu: 0 piksel;
+				yükseklik: 52 piksel;
+				genişlik: 51 piksel;
+			}
+
+			/* Renkler */
+			.titleBar__01af6>*:nth-child(2):hover{ /* X/close */
+				arka plan: #D71526;
+			}
+			.titleBar__01af6>*:nth-child(3):hover,
+			.titleBar__01af6>*:nth-child(4):hover{
+				arka plan: #70707050;
+			}
+
+
+	/* Sunucular liste çubuğu */
+		/* Konum */
+		.scroller__3d071, .wrapper_a7e7a8{
+			yükseklik: calc(100% - 164px);
+			genişlik: 72 piksel;
+			arka plan: şeffaf;
+			taşma-y: otomatik !önemli;
+		}
+		div[aria-label = "Sunucular"]{
+			üst kenar boşluğu: 8 piksel;
+			sol kenar boşluğu: 4 piksel;
+		}
+		.listItem_fa7b36{
+			Ekran bloğu;
+			genişlik: 48 piksel;
+			kenar boşluğu: 0 piksel;
+			sol: 8 piksel;
+			arka plan: şeffaf;
+		}
+		.wrapperSimple_a34580{
+			kenarlık yarıçapı: 6px !önemli;
+		}
+			/* BD Eklentisi: Sunucuyu DevilBro'nun kanalları olarak görüntüle */
+			.styledGuildsAsChannels-DNHtg_ .wrapper_a7e7a8 .listItem_fa7b36{
+				sol kenar boşluğu: 0 piksel;
+			}
+			/* Seçim hapı */
+			.styledGuildsAsChannels-DNHtg_ .wrapper_a7e7a8 .wrapper__3670f{
+				sol: 0 piksel;
+			}
+
+
+		/* Arka plan */
+		.layers_a40797{
+			arka plan: rgb(var(--backgroundTitlebar)) !important;
+		}
+
+
+		/* Ana sayfa simgesi */
+			/* Konum */
+			.guilds__2b93a .tree__7a511:odaklanma{
+				anahat rengi: şeffaf;
+			}
+			.guilds__2b93a .scroller__3d071{
+				şunları içerir: ayarlanmamış;
+				üst kenar boşluğu: 46 piksel;
+			}
+			.guilds__2b93a .scroller__3d071 .tutorialContainer__890ea{
+				konum: sabit;
+				sol: 4 piksel;
+				dönüştürme: TranslateY(-%100);
+			}
+			/* Simge */
+			.childWrapper__01b9c svg yolu{
+				dönüştürme: ölçekle (0,055) döndür (180 derece) çevir (-485 piksel, -390 piksel);
+				doldur: rgb(var(--text));
+				d: yol("M92 377 l-92 -92 0 -143 0 -142 75 0 75 0 0 85 0 85 50 0 50 0 0 -85 0 -85 75 0 75 0 0 143 0 142 -93 93 c-51 50 -99 92 -107 92 -9 0 -57 -42 -108 -93z m195 -29 l83 -83 0 -117 0 -118 -45 0 -45 0 0 85 0 85 -80 0 -80 0 0 -85 0 -85 -45 0 -45 0 0 117 0 118 82 82 c46 46 85 83 88 83 2 0 42 -37 87 -82z") !önemli;
+			}
+
+				/* Boyut */
+				.childWrapper__01b9c svg {
+					yükseklik: 32 piksel;
+					genişlik: 32 piksel;
+				}
+				.styledGuildsAsChannels-DNHtg_ .wrapper_a7e7a8 .childWrapper__01b9c svg {
+					yükseklik: 24px !önemli;
+					genişlik: 24px !önemli;
+				}
+
+			 .childWrapper__01b9c:has(childWrapper__01b9c svg) {
+				esnek yön: satır tersi;
+			 }
+
+
+
+		/* Klasörler */
+			/* Daraltılmış simge */
+			.folderIconWrapper__72239, /* Klasör rengi */
+			.iconInactive__90d40, /* Klasör simgesinde */
+			.wrapper-28eC3z > svg > yabancıObject{ /* Ana simge */
+				maske: yok;
+				kenarlık yarıçapı: 6px !önemli;
+			}
+
+			/* Genişletilmiş simge */
+			.klasör__17546 {
+				arka plan rengi: rgb(var(--background));	
+			}
+				/* Genişletilmiş parça */
+				.wrapper_ed1dea > ul[role="grup"]{
+					yükseklik: %100 !önemli;
+				}
+				.wrapper_ed1dea:has(.expandedFolderBackground__1bec6){
+					genişlik: 64 piksel;
+					minimum genişlik: 64 piksel;
+					kenar boşluğu alt: 8 piksel;
+					sol: 0 piksel;
+					sınır yarıçapı: 8px !önemli;
+					arka plan: rgb(var(--contentDialogContent));
+				}
+					/* BD Eklentisi: Sunucuları DevilBro'nun kanalları olarak görüntüleyin */
+					.styledGuildsAsChannels-DNHtg_ .wrapper_a7e7a8 .expandedFolderBackground__1bec6{
+						sol: 0 piksel;
+					}
+
+
+		/* Sunucular */
+			/* Konum */
+			.wrapper-28eC3z{
+				üst kenar boşluğu: 6 piksel;
+			}
+
+
+			/* Arka plan */
+			.icon__0cbed{
+				arka plan: #000000;
+				dönüşüm: ölçek(0,9);
+				kenarlık yarıçapı: 6px;
+			}
+
+
+			/* Yan vurgu */
+			.item_f9d377[style*="yükseklik: 8 piksel"]{
+				ekran: engelle !önemli;
+			}
+			.item_f9d377[style*="yükseklik: 40 piksel"]{
+				ekran: engelle !önemli;
+				genişlik: 4 piksel;
+				yükseklik: 24px !önemli;
+				sınır yarıçapı: 4px !önemli;
+				arka plan: var(--os-accent-color, #4cc2ff);
+			}
+				/* Seçilenin dışındaki herhangi bir şeyin üzerindeki hapı kaldır */
+				.item_f9d377{
+					görüntü yok;
+				}
+
+				
+			/* Okunmamış rozeti */
+				/* Konum */
+				.item_f9d377[style*="opacity: 1; height: 8px"] /* Sunucu çubuğu */{
+					arka plan: rgb(var(--okunmamış)) !important;
+					sınır yarıçapı: %50;
+					üst: 0 piksel;
+					sol: 48 piksel;
+				}
+				.pill_d1140c, .pill__6b31b{
+					işaretçi olayları: yok !önemli;
+					taşma: görünür;
+				}
+
+				/* Değinmek */
+				.lowerBadge-3WTshO > div{
+					konum: göreceli;
+					üst: -30 piksel;
+					sağ: -6px;
+					dönüşüm: ölçek(0,55);
+					renk: şeffaf;
+					taşma: gizli;
+					z-endeksi: 100 !önemli;
+				}	
+
+
+		/* Alt Simgeler */
+			/* Sunucu ekle butonu */
+			.tutorialContainer_dc6fde{
+				konum: sabit;
+				sol: 4 piksel;
+				alt: 110 piksel;
+				z-endeksi: 11;
+			}
+
+
+			/* Keşif butonu */
+			.tutorialContainer_dc6fde + .listItem_fa7b36{
+				konum: sabit;
+				sol: 12 piksel;
+				alt: 58 piksel;
+				şunları içerir: yok;
+				z-endeksi: 11;
+			}
+
+
+			/* Ayarlar butonu */
+				/* Konum */
+				.flex_f5fbb7 > düğme[aria-label="Kullanıcı Ayarları"]{
+					konum: sabit;
+					genişlik: 64px !önemli;
+					yükseklik: 56px !önemli;
+					alt: 4px !önemli;
+					sol: 4 piksel;
+					renk: rgb(var(--text));
+					kenarlık yarıçapı: 8 piksel;
+					z-endeksi: 11 !önemli;
+				}
+
+				/* Boyut */
+				.flex_f5fbb7 > düğme[aria-label="Kullanıcı Ayarları"] > div{
+					genişlik: 48 piksel;
+					yükseklik: 48 piksel;
+					z-endeksi: 10 !önemli;
+				}
+
+				/* Simge */
+				.flex_f5fbb7 > düğme[aria-label="Kullanıcı Ayarları"] > div > svg {
+					genişlik: 48 piksel;
+					yükseklik: 48 piksel;
+				}
+				.flex_f5fbb7 > düğme[aria-label="Kullanıcı Ayarları"] > div > svg > yol{
+					dönüşüm: ölçek(0,025) çeviri(164 piksel, 164 piksel);
+					doldur: rgb(var(--text));
+					d: yol("M178 598 c-51 -22 -53 -26 -39 -75 12 -41 -1 -54 -42 -42 -50 14 -53 12 -78 -48 l-23 -56 30 -23 c16 -13 32 -24 37 -24 4 0 7 -9 7 -20 0 -11 -3 -20 -7 -20 -5 0 -21 -11 -37 -24 l-30 -23 23 -56 c25 -60 28 -62 78 -48 41 12 54 -1 42 -42 -5 -18 -9 -37 -9 -43 0 -11 91 -54 114 -54 6 0 20 16 30 35 11 21 27 35 38 35 10 0 18 - 3 18 -7 0 -5 11 -21 23 -37 l24 -29 49 18 c66 25 68 27 57 74 -14 51 -3 62 48 48 47 -11 49 -9 74 57 l18 49 -29 24 c-16 12 - 32 23 -36 23 -5 0 -8 8 -8 18 0 11 14 27 35 38 41 22 41 23 16 89 -21 56 -27 60 -74 47 -45 -13 -58 -1 -46 41 14 50 12 53 -48 78 l-56 23 -23 -30 c-13 -16 -24 -32 -24 -36 0 -21 -38 -3 -58 27 -25 40 -30 41 -94 13z m81 -53 c16 -27 27 -35 50 -35 27 0 41 12 76 68 1 1 16 -3 34 -9 22 -8 30 -16 27 -28 -18 -59 -17 -70 4 -91 21 -21 32 -22 91 -4 12 3 20 -5 28 -27 6 -18 11 -33 11 -35 0 -1 -16 -11 -35 -23 -28 -16 -35 -27 -35 -51 0 -24 7 -35 35 -51 19 -12 35 -22 35 -23 0 -2 -5 -17 -11 -35 -8 -22 -16 -30 -28 -27 -59 18 -70 17 -91 -4 -21 -21 -22 -32 -4 - 91 3 -12 -5 -20 -27 -28 -18 -6 -33 -10 -34 -9 -35 56 -49 68 -76 68 -23 0 -34 -8 -50 -35 -12 -19 -22 -35 -23 -35 -2 0 -17 5 -35 11 -22 8 -30 16 -27 28 18 59 17 70 -4 91 -21 21 -32 22 -91 4 -12 -3 -20 5 -28 27 -6 18 -10 33 -9 34 55 34 68 49 68 75 0 26 -13 41 -68 75 -1 1 3 16 9 34 8 22 16 30 28 27 59 -18 70 -17 91 4 21 21 22 32 4 92 -3 11 4 19 23 26 15 39 15 62 -23Z M260 413 C -95 -49 -83 -183 20 -214 53 -16 107 10 134 65 17 36 18 43 5 79 -25 71 -96 102 -159 70Z m104 -44 c19 -15 26 -29 26 -57 0 -75 -83 -110 -135 -57 -73 72 28 178 109 114z") !önemli;
+				}
+
+
+			/* Paylaşıldı */
+				/* Vurgulu */
+				.wrapper_d281dd:hover, /* Ana Sayfa */
+				.circleIconButton_d8df29:hover, /* Sunucu + Keşif ekle */
+				.flex_f5fbb7 > düğme[aria-label="Kullanıcı Ayarları"]: üzerine gelin{ /* Ayarlar */
+					arka plan: rgb(var(--buttonHover));
+				}
+
+
+				/* Seçildi */
+				.wrapper_d281dd:içine odaklan, /* Ana Sayfa */
+				.circleIconButton_d8df29.selected__5250e, /* Sunucu + Keşif ekle */
+				.flex_f5fbb7 > düğme[aria-label="Kullanıcı Ayarları"]:focus-within{ /* Ayarlar */
+					arka plan: rgb(var(--buttonSelected)) !important;
+				}
+					/* Hap */
+					.styledGuildsAsChannels-DNHtg_ .wrapper_a7e7a8 .childWrapper__01b9c{
+						dolgu: 0px;
+						sol dolgu: 16 piksel;
+					}
+
+
+/* 3. İçerik --------------------------------------------- -------------------------------------------------- --------- */
+	/* DM */
+		/* Şimdi Aktif */
+			.wrapper__6e669:içine odaklan,
+			.wrapper__6e669{
+				arka plan: var(--buttonAccentStandard) !important;
+				kenarlık: 1px katı var(--border);
+			}
+			.wrapper__6e669:hover{
+				arka plan: var(--buttonAccentHover) !important;
+			}
+			.wrapper__6e669:odak-içinde:hover{
+				arka plan: var(--buttonAccentSelected) !important;
+			}
+				.inset__0bfb3{
+					arka plan: şeffaf !önemli;
+				}
+				.section_efc22d{
+					arka plan: şeffaf;
+					dolgu: 0px;
+					sol dolgu: 44px;
+				}
+
+
+		/* Arkadaşı Grup contentDialog'a ekle */
+			/* Başlık */
+			.popout__08442 .header-1zd7se,
+			.popout__08442 .header-1zd7se .separator-2lLxgC{
+				arka plan: rgb(var(--contentDialogFooterHeader)) !important;
+			}
+
+			/* Arkadaş listesi */
+			.popout__08442 .content-2a4AW9 .friendWrapper__70b6f{
+				kenar boşluğu: 0 piksel;
+			}
+				/* İsim */
+				.nickname_bad638{
+					görüntü yok;
+				}
+				.discordTag_c7823f.nameTag__693ff{
+					color: rgb(var(--text)) !important;
+					opaklık: 1 !önemli;
+				}
+
+			/* Altbilgi */
+			.popout__08442 .footer__274e8{
+				arka plan: rgb(var(--contentDialogFooterHeader));
+				dolgu: 10 piksel 8 piksel 10 piksel 8 piksel;
+			}
+
+		
+			/* Mağaza */
+				/* Arka plan */
+				.shopScroll__2feb5{
+					arka plan: rgb(var(--background));
+				}
+
+			/* Aile merkezi */
+				/* Arka plan */
+				.contentPanel__2fdef{
+					arka plan: rgb(var(--background));
+				}
+
+
+		/* BD Eklentisi: DevilBros'un PinDM'leri */
+			.unpinButton-z3-UVO{
+				sağ kenar boşluğu: 14 piksel;
+			}
+
+
+	/* Sunucu */
+		/* Sunucu başlığı */
+			/* Konum */
+			.container__7c79d{
+				ekran: esnek;
+				esnek yön: sütun tersi;
+			}
+			.animatedBannerHoverLayer__4274d{
+				yükseklik: 135px !önemli;
+			}
+			.animatedContainer__341f6{
+				konum: göreceli;
+			}
+			.bannerImg_c85b7f, .bannerImage__39c51{
+				genişlik: var(--sidebarWidth);
+				nesne uyumu: doldurma;
+			}
+			.bannerImage__39c51, .animatedContainer__341f6{
+				opaklık: 1 !önemli;
+				transform: Scale(1) TranslateY(0px) !important;
+			}
+
+
+		/* Sunucu adı */
+		.header__104ca {
+			arka plan rengi: rgb(var(--backgroundTint)) !important;
+			kutu gölgesi: yok !önemli;
+		}
+			/* Çiçek simgesi */
+			.iconBackgroundTierNone__800b6,
+			.iconBackgroundTierOne_df8d8c,
+			.iconBackgroundTierThree__1c0d5,
+			.iconBackgroundTierTwo__1792c,
+			.boostedGuildTierIconBackgroundWithVisibleBanner_ccdeaf {
+				color: rgb(var(--text)) !important;
+			}
+
+
+		/* Discord hatası: Kenar çubuğu yüksekliği düzeltmesi */
+		.content__23cab{
+			yükseklik: %100 !önemli;
+		}
+
+		/* Sunucu güçlendirme çubuğu */
+			/* Konum */
+			.container__4f639{
+				kenar boşluğu: 6 piksel;
+			}
+
+			/* Simge */
+			.flowerStar-38IYO7{
+				üst kenar boşluğu: 8 piksel;
+			}
+
+			/* İlerleme çubuğu arka planı */
+			.progressBarContainer-2E4oR-{
+				arka plan: rgb(var(--sidebarButtonHover)) !important;
+			}
+
+
+		/* Kanallar ve roller */
+			/* Özelleştirmek */
+				.prompt__1b100{
+					arka plan: rgb(var(--contextBackground))
+				}
+
+				/* Düğme */
+				.optionButtonWrapper__4072c{
+					arka plan: rgb(var(--buttonStandard));
+					kenarlık: 1px katı var(--buttonBorder) !important;
+					kenarlık yarıçapı: 4px;
+				}
+				.optionButtonWrapper__4072c:hover{
+					arka plan: rgb(var(--buttonHover));
+				}
+				.optionButtonWrapper__4072c.selected__90dd8{
+					arka plan: rgb(var(--buttonSelected));
+				}
+					.buttonText_a1963e{
+						sağ dolgu: 18 piksel !önemli;
+					}
+
+					.checkIcon__5aa1f{
+						top: calc(50% - 10px) !important;
+						sağ: 10px !önemli;
+					}
+
+		/* Kanallara Göz Atın */
+			.channelRow__96673{
+				arka plan: rgb(var(--buttonStandard)) !important;
+			}
+
+
+		/* Kanal kategorileri */
+			/* Konum */
+			.sidebar_ded4b5 .wrapper__9c483{
+				dolgu: 16 piksel 8 piksel 16 piksel 42 piksel;
+			}
+			.sidebar_ded4b5 .containerDefault__23a29{
+				üst dolgu: 0px;
+			}
+
+
+			/* Simge */
+			.sidebar_ded4b5 .wrapper__9c483 .icon_ef4486{
+				kenar boşluğu-sol: %91;
+				genişlik: 21 piksel;
+				yükseklik: 21 piksel;
+				üst: %15;
+			}
+			
+			/* Kanal simgesi oluştur */
+			.addButton__8b4f0{
+				sağ kenar boşluğu: 24 piksel;
+			}
+
+
+		/* Kanallar */
+			/* Arka plan */
+			.container__590e2{
+				arka plan: rgb(var(--backgroundTint));
+			}
+
+			/* Okunmamış */
+			.sidebar_ded4b5 .wrapper__7bcde .unread__48cf4{
+				genişlik: 3 piksel;
+				yükseklik: 18 piksel;
+				üst: 9 piksel;
+				sol: 38 piksel;
+				üst kenar boşluğu: 0px !önemli;
+				arka plan: rgb(var(--okunmamış));
+				kenarlık yarıçapı: 8 piksel;
+				z-endeksi: 1 !önemli;
+			}
+			
+			/* Metin */
+				/* İlk harfi büyük harfe çevirmek */
+				.standardSidebarView__1129a .contentColumn_dc7d36 .title__7dcdc::first-letter,
+				.sidebar_ded4b5 .mainContent-20q_Hp .name__8d1ec::first-letter,
+				.root_a28985 .override-1sK4r0 .channelName-IPB6B3::first-letter,
+				.root_a28985 .wrapper__5ed5d .title__7dcdc::first-letter{
+					metin dönüşümü: büyük harf;
+				}
+
+				/* Renk */
+				.name__8d1ec,
+				.name__8d1ec:hover{
+					renk: rgb(var(--text));
+				}
+					/* Susturuldu */
+					.wrapper__9c483.muted_de6e6e, .wrapper__9c483.muted_de6e6e .name__590d6, /* Kategori */
+					.modeMated__0aeea .icon_eff5d4, .modeMated__0aeea .name__8d1ec{ /* Kanal */
+						color: var(--text-muted) !important;
+					}
+
+
+			/* Simgeler */
+				/* Standart */
+				.sidebar_ded4b5 .wrapper__7bcde.modeUnread_f74c03 .icon_eff5d4,
+				.sidebar_ded4b5 .wrapper__7bcde.modeSelected__487d6 .icon_eff5d4,
+				.sidebar_ded4b5 .wrapper__7bcde .icon_eff5d4{
+					renk: rgb(var(--text));
+				}
+
+				/* Sessiz Kanal Simgesi */
+				.sidebar_ded4b5 .wrapper__7bcde.modeMuted__0aeea .icon_eff5d4{
+					renk: rgb(var(--buttonDisabled));
+				}
+				
+				/* Katılan Ses Kanalı Simgesi */
+				.sidebar_ded4b5 .wrapper__7bcde.modeConnected__1c02e .icon_eff5d4{
+					renk: var(--os-accent-color, #4cc2ff);
+				}
+
+			/* Sesli sohbet kullanıcıları */
+			.list__02208{
+				sol dolgu: 78 piksel !önemli;
+			}
+
+
+		/* Mesajlar */
+			/* Kanal bilgisi */
+				/* Konum */
+				.communityInfoVisible_b0482d .communityInfoContainer__286d6{
+					üst kenar boşluğu: -22 piksel;
+					sol kenar boşluğu: 200 piksel;
+				}
+
+				/* Arka plan */
+				.container__11d72.themed_b152d4{
+					yükseklik: 48 piksel;
+					genişlik: %100;
+					kutu gölgesi: yok;
+					arka plan: rgb(var(--backgroundTint));
+				}
+				
+				/* Bölücü */
+					/* Ad | Tanım */
+					.container__11d72 .divider_c09b64{
+						arka plan: #FFFFFF;
+					}
+
+					/* Simge */
+					.container__11d72 .icon__4cb88{
+						renk: rgb(var(--text));
+					}
+
+					/* Düğmeler */
+						/* Konum */
+						.iconWrapper_af9215{
+							kenar boşluğu: 0 piksel 17 piksel;
+						}
+
+			/* Sunuma atla */
+			.jumpToPresentBar__0ff7f{
+				genişlik: %75;
+				maksimum genişlik: 576 piksel;
+				yükseklik: 52px !önemli;
+				kenar boşluğu: 0 otomatik;
+				kenar boşluğu alt: 6 piksel;
+				dolgu: 0px;
+				sol dolgu: 42px;
+				arka plan: rgb(var(--infobarMessage)) !important;
+				opaklık: 1 !önemli;
+				kenarlık yarıçapı: 4px;
+			}
+
+
+		/* Üye listesi */
+			/* Konum */
+			.container_b2ce9c{
+				genişlik: var(--userlistWidth);
+			}
+				/* Otomatik daralt */
+				@media yalnızca ekran ve (maks. genişlik: 1200 piksel){
+					.container_b2ce9c{
+						görüntü: yok !önemli;
+					}
+				}
+
+
+			/* Arka plan */
+			.container_b2ce9c{
+				arka plan: rgb(var(--backgroundTint)) !important;
+			}
+		
+
+			/* Rol başlığı */
+			.membersGroup__85843{
+				genişlik: calc(var(--userlistWidth) - 26px);
+				yükseklik: 30 piksel;
+				kenar boşluğu: 8 piksel 0 piksel 4 piksel 8 piksel;
+				dolgu: 10 piksel 0 piksel 0 piksel 0 piksel;
+				metin hizalama: ortala;
+				border-bottom: 1 piksel düz güncel renk;
+			}
+
+
+			/* Kullanıcılar */
+				/* Vurgulu */
+				.members__9f47b .selected__9800b .layout_bb8e67,
+				.members__9f47b .clickable__17ccb:hover .layout_bb8e67,
+				.members__9f47b .clickable__17ccb:active .layout_bb8e67{
+					arka plan: rgb(var(--sidebarButtonHover));
+					kenarlık yarıçapı: 4px;
+				}
+
+			
+				/* Avatarı */
+				.wrapper_edb6e0 yabancıObject[width="32"]{
+					sınır yarıçapı: %50;
+				}
+					/* İş Parçacığı */
+					.mask-1FEkla.svg-2azL_l > yabancıObject{
+						maske: yok !önemli;
+					}
+
+					/* Durum */
+					.pointerEvents-9SZWKj{
+						z-endeksi: 10 !önemli;
+					}
+					.wrapper_edb6e0[style*="32px"] > svg > rect{
+						yükseklik: 10px !önemli;
+						vuruş: rgb(var(--backgroundTitlebar)) !important;
+						kontur genişliği: 2px !önemli;
+						transform: Translate(0px, 0px) !important;
+					}
+						/* Mobil simge */
+						.wrapper_edb6e0 yabancıObject[mask*=mobile]:sonra{
+							görüntü yok;
+						}
+
+		/* Formlar */
+			/* Gönderi yönergeleri */
+			.container-3arpDl{
+				arka plan: rgb(var(--infobarMessage)) !important;
+				kenar boşluğu-alt: 0px !önemli;
+				sınır yarıçapı: 4px !önemli;
+			}
+			.descriptionContainer-2ylKGk{
+				arka plan: şeffaf !önemli;
+				dolgu: 0px 28px 0px 28px !önemli;
+			}
+
+
+			/* Başlığı kontrol eder */
+				/* Arka plan */
+				.container__8ee50{
+					üst kenar boşluğu: 4 piksel;
+					arka plan: rgb(var(--contextBackground));
+					kutu gölgesi: yok;
+					sınır: yok;
+					kenarlık yarıçapı: 8 piksel;
+				}
+				.divider_ffec75{
+					görüntü yok;
+				}
+			
+				/* Discord hatası: Kaydırma sırasında üst kısma yapışmama sorunu düzeltildi */
+				.scrollerInner__059a5 {
+					taşma: ayarlanmadı;
+				}
+
+
+	/* Paylaşıldı */
+		/* Arama Sonuçları */
+			/* Arka plan */
+			.searchResultsWrap__9f374{
+				genişlik: 512px !önemli;
+				arka plan: rgb(var(--contentDialogBackdrop));
+			}
+			.scroller_c8d5ad{
+				dolgu: 0px;
+				arka plan: rgb(var(--backgroundTint));
+			}
+
+			/* Başlık */
+			.searchHeader__19d87,
+			.searchResultsWrap__9f374 .channelName-3w2Y3c{
+				arka plan: rgb(var(--backgroundTint));
+				dolgu: 8 piksel 16 piksel;
+			}
+
+			/* Mesajlar */
+			.searchResultsWrap__9f374 .searchResult_dcd237{
+				arka plan: şeffaf;
+				kenarlık yarıçapı: 12px;
+			}
+			.searchResultsWrap__9f374 .searchResult_dcd237:hover{
+				arka plan: rgb(var(--buttonHover));
+			}
+
+
+		/* Kenar çubuğu */
+			/* Konum */
+			.container__7c79d, .sidebar_ded4b5{
+				genişlik: var(--sidebarWidth);
+			}
+
+			/* Arka plan */
+			.scroller__4b984.thin_b1c063, .userProfileInner-3F03PX:önce, /* DM'ler */
+			.container__590e2{ /* Sunucu */
+				arka plan: rgb(var(--backgroundTint)) !important;
+			}
+
+
+			/* Çalmakta */
+				/* Konum */
+				.panel_bd8c76{
+					kenar boşluğu: 4 piksel;
+					dolgu: 6 piksel;
+					kenarlık alt: yok;
+					border-top: 1px katı rgb(var(--text));
+				}
+
+				/* Arka plan */
+				.panels__58331{
+					arka plan: rgb(var(--backgroundTint)) !important;
+				}
+
+				/* Kanal simgesi düzeltmesi */
+				.mainContent-20q_Hp[aria-label*=support][aria-label$="text kanalı)"]>div>svg>path:first-child{
+					transform: Scale(0.9) !important;
+				}
+
+
+			/* Ses bağlantılı panel */
+				/* Konum */
+				.connection__5bb32{
+					kenar boşluğu alt: 24 piksel;
+				}
+
+
+				/* Metin */
+				.container_d667ff .size12-oc4dx4{
+					yazı tipi boyutu: 11 piksel;
+					satır yüksekliği: 11 piksel;
+					beyaz boşluk: ön satır;
+				}
+					/* BD Eklentisi: QWERT'in CallTimeCounter'ı */
+					.voiceTimer{
+						üst kenar boşluğu: 6 piksel !önemli;
+					}
+
+
+				/* Boyut */
+				.panels__58331{
+					genişlik: var(--sidebarWidth);
+				}
+				.voiceUsers_c72ec5{
+					yükseklik: 42 piksel;
+					üst kenar boşluğu: 12 piksel;
+					dolgu-alt: 0px;
+				}
+				.container_d667ff{
+					kenar boşluğu: 4 piksel;
+					dolgu: 6 piksel;
+					border-top: 1px katı rgb(var(--text));
+					kenarlık alt: yok;
+				}
+
+
+				/* Düğmeler */
+					/* Gürültü bastırma ve Bağlantıyı Kes */
+						/* Konum */
+						.alignCenter__84269 .justifyStart__42744.alignStretch_e239ef.noWrap__5c413{
+							konum: sabit;
+							sol: 144 piksel;
+							alt: 2 piksel;
+						}
+						.horizontal__992f6>.flex_f5fbb7{
+							kenar boşluğu: 0 piksel;
+						}
+						butonu[aria-label="Krisp tarafından desteklenen Gürültü Bastırma"]{
+							sağ kenar boşluğu: 4 piksel;
+						}
+
+						/* Simgeler */
+						.connection__5bb32 > .flex_f5fbb7 > düğme{
+							color: rgb(var(--text)) !important;
+						}
+
+					/* Sessiz ve sağır */
+					.container_ca50b9 .justifyStart__42744.alignStretch_e239ef.noWrap__5c413{
+						konum: sabit;
+						sol: 76 piksel;
+						alt: 2 piksel;
+					}
+
+						/* Simgeler */
+						Button.button_afdfd9.lookBlank__7ca0a:not(.rtcConnectionStatusLabel__7029b){
+							renk: rgb(var(--text));
+						}
+
+					/* Kamera, paylaşım ekranı, etkinlik, ses tahtası düğmeleri */
+					.actionButtons_b58cbb .lookFilled__19298{
+						dolgu: 0px !önemli;
+						kenarlık: yok !önemli;
+						arka plan: şeffaf !önemli;
+						color: rgb(var(--text)) !important;
+					}
+					.actionButtons_b58cbb{
+						konum: mutlak;
+						sol: 148 piksel;
+						alt: 0 piksel;
+						ekran: esnek;
+						ızgara boşluğu: 16 piksel;
+					}
+
+
+				/* Gürültü Bastırma Menüsü açılır */
+					/* Arka plan */
+					.noiseCancellationPopout__06ec4{
+						arka plan: rgb(var(--contentDialogBackdrop));
+						genişlik: 230 piksel;
+						dolgu: 12 piksel;
+						kenar boşluğu alt: -4 piksel;
+						sol kenar boşluğu: -30px;
+						zemin filtresi: bulanıklaştırma (16 piksel);
+					}
+
+
+				/* Ses istatistikleri ortaya çıkıyor */
+					/* Arka plan */
+					.container__0810b{
+						arka plan: şeffaf;
+					}
+					.bölüm__26a76{
+						sınır yarıçapı: 10 piksel !önemli;
+						arka plan: rgb(var(--contentDialogBackdrop)) !important;
+						zemin filtresi: bulanıklık(16px) !önemli;
+					}
+
+
+		/* Kanal çubuğu */
+			/* Sabitlenmiş mesaj */
+				/* Başlık */
+				.layer-2aCOJ3 .header_f5cc88{
+					arka plan: rgb(var(--contentDialogFooterHeader));
+					kutu gölgesi: yok;
+					dolgu: 18 piksel 10 piksel;
+				}
+
+				/* İçerik */
+				.messagesPopout__22763{
+					kenar boşluğu: 0 piksel;
+					dolgu: 0px;
+					arka plan: rgb(var(--contentDialogContent));
+				}
+
+				/* Mesajlar */
+					/* Standart */
+					.messageGroupWrapper_f8c6e9{
+						kenar boşluğu: 0 piksel;
+						kenar boşluğu alt: 4 piksel;
+						sınır yarıçapı: 8px !önemli;
+						sınır: yok;
+						arka plan: şeffaf;
+					}
+							
+					/* Vurgulu */
+					.layer-2aCOJ3 .messageGroupWrapper_f8c6e9:hover{
+						arka plan: rgb(var(--sidebarButtonHover));
+					}
+
+
+			/* İş Parçacığı */
+				/* Başlık */
+				.kontroller-SB-N9h,
+				.header__53b07{
+					arka plan: rgb(var(--contentDialogFooterHeader));
+					dolgu: 4 piksel 8 piksel;
+				}
+					/* Kapat butonu */
+					.closeIcon__15ae7{
+						görüntü yok;
+					}
+
+				/* Arka plan */
+				.list__19127{
+					arka plan: rgb(var(--contentDialogContent));
+				}
+
+				/* Öğeler */
+					/* Standart */
+					.container__6604b{
+						arka plan: rgb(var(--buttonStandard));
+						kenarlık: yok !önemli;
+					}
+
+					/* Vurgulu */
+					.container__6604b:hover{
+						arka plan: rgb(var(--buttonHover));
+					}
+
+
+			/* Gelen kutusu */
+				/* Arka plan */
+				.container__6bc11{
+					arka plan: rgb(var(--contentDialogContent));
+				}
+
+				/* Başlık */
+				.header__28ebb{
+					dolgu: 12px 10px !önemli;
+				}
+					/* Düğmeler */
+					.tab_a8a066{
+						kenar boşluğu: 0px !önemli;
+						üst kenar boşluğu: 4 piksel !önemli;
+						sağ kenar boşluğu: 24 piksel !önemli;
+						dolgu: 0px !önemli;
+					}
+
+				/* Mesaj sunucusu konumu */
+				.channelHeader__5d30c{
+					arka plan rengi: rgb(var(--contentDialogFooterHeader));
+				}
+
+				/* İleti */
+				.messageContainer_aa7d14{
+					kenar boşluğu: 0 piksel;
+					dolgu: 0px;
+					dolgu üst: 6px;
+					arka plan rengi: şeffaf;
+				}
+		
+
+			/* Paylaşıldı */
+				/* Konum */
+				.layer-2aCOJ3[style^="konum: mutlak; üst: 93 piksel; sağ"], /* Gelen Kutusu */
+				.layer-2aCOJ3[style^="position: Absolute; top: 93px; right"]{ /* Sabitlenmiş mesajlar */
+					sağ: 0px !önemli;
+				}
+				.browser_fece63, /* Konular */
+				.messagesPopoutWrap_b3b384, /* Gelen Kutusu */
+				.layer-2aCOJ3 .container__20de0{ /* Sabitlenmiş mesajlar */
+					maksimum yükseklik: 900 piksel !önemli;
+					genişlik: var(--contentDialogWidth) !important;
+					kenarlık yarıçapı: 8 piksel;
+				}
+
+		/* Mesajlar */
+			/* Konum */
+			.scrollerInner__059a5{
+				dolgu: 0 piksel 36 piksel;
+			}
+
+			/* Arka plan */
+			.container__10dc7, /* Kanallar ve roller */
+			.messagesWrapper_ea2b0b, /* Konu kenar çubuğu */
+			.base__3e6af{ /* Kanal Mesajları */
+				arka plan: rgb(var(--background)) !important;
+			}
+
+			/* Simge yükleniyor */
+			.wrapper_b8c724{
+				arka plan görüntüsü: url('https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-loading.gif?raw=true');
+				arka plan: tekrarlanmayan, orta;
+			}
+			.wrapper__5c5cd.cozy__32560{
+				görüntü yok;
+			}
+
+			/* Sohbet Tarihi */
+			.divider__7fb6a,
+			.divider__8cf56{
+				sağ kenar boşluğu: 12 piksel;
+			}
+			.divider_b9338f .content_d67847{
+				arka plan: rgb(var(--background));
+				kenarlık yarıçapı: 5 piksel;
+				dolgu: 2 piksel 4 piksel;
+				renk: rgb(var(--text));
+			}
+			.divider__8cf56 .unreadPill__715fc,
+			.divider__8cf56 .unreadPillCap__96b8d{
+				yükseklik: 11 piksel;
+			}
+
+			/* Yeni Mesaj */
+			.divider_b9338f.isUnread__6f880, #---new-messages-bar, .unreadPill__715fc{
+				--divider-color: rgb(var(--okunmamış)) !important;
+			}
+				/* Metin */
+				.divider__8cf56 .unreadPill__715fc{ /* Yeni metin */
+					renk: #FFFFFF !önemli;
+				}
+
+			/* Vurgulu */
+			.chat__52833 .bahsedilen__58017.message__80c10: üzerine gelin,
+			.chat__52833 .message__80c10:hover{
+				arka plan: rgb(var(--sidebarButtonHover)) !important;
+				kenarlık yarıçapı: 8 piksel;
+			}
+
+			/* Seçildi */
+			.chat__52833 .message__80c10.selected_fd9051{
+				arka plan: var(--os-accent-color, #4cc2ff) !important;
+				kenarlık yarıçapı: 8 piksel;
+			}
+
+			/* Yanıt flaşına git */
+			.chat__52833 .backgroundFlash_e5b9ad{ /* İncele */
+				kenarlık yarıçapı: 8 piksel;
+				animasyon: answerFlash 2s 3;
+			}
+
+			/* Bahsetmeler */
+				/* Sol tarafı vurgula */
+				.bahsedilen__58017:önce{
+					arka plan rengi: şeffaf !önemli;
+				}
+
+				/* Arka plan */
+				.bahsedilen__58017{
+					kenarlık yarıçapı: 8 piksel;
+					arka plan: var(--os-accent-color, #4cc2ff);
+				}
+
+			/* Mesaj gönderilemedi */
+			.isFailed__797dd{
+				arka plan rengi: rgb(var(--infobarError));
+			}
+
+			/* Kullanıcı rolü simgesi */
+			.newMemberBadge__17bc0,
+			[class*="roleIcon"]{
+				şamandıra: sol;
+				sol kenar boşluğu: 0rem;
+				sağ kenar boşluğu: 0,25rem;
+			}
+
+			/* Mesaj aracı ipucu */
+				/* Konum */
+				.isHeader__4c092{
+					üst: 0 piksel;
+				}
+				.container__9d616 .wrapper_c727b6{
+					arka plan: rgb(var(--buttonStandard));
+					kutu gölgesi: yok;
+				}
+
+				/* Arka plan */
+				.full-motion .wrapper_c727b6:hover{
+					kutu gölgesi: yok;
+				}
+
+				/* Vurgulu */
+				.container__9d616 .wrapper_c727b6 .button_d553e5.selected__63428,
+				.container__9d616 .wrapper_c727b6 .button_d553e5:hover{
+					arka plan: rgb(var(--sidebarButtonHover));
+					kenarlık yarıçapı: 4px;
+				}
+
+
+			/* İçeriği göm */
+				/* Resim ve video */
+				.cameraPreview-2_ITfQ,
+				.embedVideo__0c65b .embedMedia_b473d2,
+				.imageWrapper_fd6587:not(.embedMedia_b473d2.embedImage_e638a7){
+					sınır yarıçapı: 8px !önemli;
+					kenarlık: 1px katı var(--border);
+				}
+					/* Tam önizlemede kenarlık yok */
+					.image__79a29, .modal_d2e7a7{
+						sınır yarıçapı: 0px !önemli;
+					}
+
+				/* Metin kutusu */
+				.markup_a7e664 pre, .container__8cab3{
+					kenar boşluğu: 0px !önemli;
+					sol kenar boşluğu: 5 piksel !önemli;
+					sağ kenar boşluğu: 5 piksel !önemli;
+				}
+					/* İçerik */
+					.textContainer__709ff{
+						arka plan: rgb(var(--contentDialogContent)) !important;
+						sınır yarıçapı: 10px 10px 0px 0px !önemli;
+					}
+						/* Metin */
+						.hljs-yorumu{
+							renk: rgb(var(--text));
+							opaklık: 0,8;
+						}
+
+					/* Altbilgi */
+					.footer__06f4b{
+						arka plan: rgb(var(--contentDialogFooterHeader)) !important;
+						color: rgb(var(--text)) !important;
+						sınır yarıçapı: 0px 0px 10px 10px !önemli;
+					}
+
+				/* Kod blokları */
+				.hljs{
+					arka plan: şeffaf !önemli;
+				}
+
+
+			/* Forumlar */
+				/* Arka plan */
+				.mainCard__8a660, /* Gönderi çubuğunu ara/oluştur */
+				.scrollerBase_dc3aa9 div.content__23cab{
+					arka plan: rgb(var(--background)) !important;
+				}
+				.container-JhuCwn{
+					dolgu: 0px;
+				}
+
+				/* Forum öğeleri */
+				.row-uezxzk{
+					dönüşüm: yok !önemli;
+				}
+				.container_c24cbd{
+					arka plan rengi: rgb(var(--buttonStandard)) !important;
+					kenarlık yarıçapı: 6px;
+					kenarlık: yok !önemli;
+				}
+
+				.container_c24cbd:hover{
+					arka plan rengi: rgb(var(--buttonHover)) !important;
+				}
+
+				.container_c24cbd:içine odaklan{
+					arka plan rengi: rgb(var(--buttonSelected)) !important;
+				}
+
+
+			/* Mesaj metni girişi gönder */
+				/* Arka plan */
+				.form__13a2c{
+					dolgu: 4px 48px 24px 32px !önemli;
+					üst kenar boşluğu: 0px !önemli;
+					arka plan: rgb(var(--background));
+				}
+				.channelTextArea__2e60f{
+					kenar boşluğu-alt: 0px !önemli;
+					arka plan: rgb(var(--background)) !important;
+				}
+
+
+				/* Yan tuşlar */
+					/* Konum */
+					.buttons_ce5b56{
+						kenar boşluğu: 0 piksel;
+						üst kenar boşluğu: -3px;
+						sağ kenar boşluğu: 38 piksel !önemli;
+						dolgu: 0px !önemli;
+						esnek yön: satır tersi;
+					}
+
+
+					/* Gönderme butonu */
+					.sendIcon__461ff{
+						dolgu: 0px !önemli;
+					}
+					.sendIcon__461ff > yol{
+						doldur: rgb(var(--text)) !important;
+						opaklık: 0,7;
+					}
+					.sendIcon__461ff:hover > yol{
+						opaklık: 1;
+						dönüşüm: ölçek(1.1);
+					}
+
+
+					/* İfadeler, çıkartmalar, gifler */
+						/* İfadeler */
+							/* Çeşitlilik el simgesi */
+								/* Konum */
+								.header__55964{
+									ekran: esnek;
+									esnek yön: satır tersi;
+									sol kenar boşluğu: -5px;
+								}
+								.header__55964 .searchBar__8f956{
+									esnek: 1;
+									sol kenar boşluğu: 6 piksel;
+								}
+
+								/* Seçildi */
+								.diversitySelectorOptionsInExpressionPicker-3wybQR{
+									sağ: ayarlanmamış;
+									sol: 11 piksel;
+									üst: -2px;
+								}
+
+							/* İfade seçici arka planı */
+							.bodyWrapper_cc3635{
+								arka plan: rgb(var(--background));
+							}
+					
+							/* Kenar çubuğu kategori seçici */
+							.wrapper__4f229{
+								arka plan: rgb(var(--backgroundTitlebar));	
+							}
+							.emojiPickerInExpressionPicker-2nOwH8 .categoryList_f8c48f{
+								genişlik: 56 piksel;
+							}
+
+							/* Nitro yalnızca ifadeler */
+							.emojiItemDisabled__36cbf{
+								filtre: yok !önemli;
+							}
+
+						/* Çıkartmalar */
+							/* Nitro yok */
+							.emptyState_b79192{
+								kenar boşluğu: 0 piksel;
+								arka plan: rgb(var(--background)) !important;
+							}
+
+							/* Kenar Çubuğu öne çıktı */
+							.categoryListWithSearch-2jrzH6{
+								genişlik: 56 piksel;	
+							}
+
+							/* Arka plan */
+							.row__959bb > div[role=gridcell]{
+								arka plan: rgb(var(--buttonStandard));
+								kenarlık yarıçapı: 6px;
+							}
+
+							/* Simge */
+							.stickerUnsendable__47eae {
+								filtre: gri tonlama(0) !önemli;
+							}
+
+							/* Seçim */
+								/* Geniş aralık için düzeltme */
+								.row__959bb{
+									sütun boşluğu: 12 piksel !önemli;
+								}
+
+						/* GIF'ler */
+							/* Arka plan */
+							.container_bc9447 {
+								arka plan: rgb(var(--background));	
+							}
+
+						/* Paylaşıldı */
+							/* Başlıklar */
+							.contentWrapper__321ed, /* Sayfa düğmeleri/Arama çubuğu */
+							.header_c3c744{ /* Kanal kategorisi başlığı */
+								arka plan: rgb(var(--backgroundTitlebar)) !important;
+								sınır yarıçapı: 0px !önemli;
+							}
+							.resizeHandle__86d9c:hover{
+								arka plan rengi: rgb(var(--contextBackground));
+							}
+
+
+					/* Sohbet Yükle/Dosya Ekle Düğmesi */
+					.sansAttachButton__996a4{
+						dolgu: 0px !önemli;
+					}
+					.channelTextArea__2e60f .attachWrapper__6354f{
+						konum: mutlak;
+						üst kenar boşluğu: -3px;
+						left: calc(100% - 32px) !important;
+						doldur: rgb(var(--text)) !important;
+						opaklık: 0,9 !önemli;
+					}
+					.channelTextArea__2e60f .attachWrapper__6354f:hover{
+						opaklık: 1 !önemli;
+					}
+						/* Yükleme ipucunu kaldır */
+						.subtext-2GlkbE{
+							görüntü: yok !önemli;
+						}
+
+
+				/* Kullanıcı yazıyor */
+				.typing__6fd1d{
+					dolgu: 0 piksel 42 piksel 0 piksel 14 piksel;
+				}
+
+
+				/* Yavaş mod etkinleştirildi */
+				.cooldownWrapper_de448f{
+					color: rgb(var(--text)) !important;
+				}
+
+
+		/* Görüntülü sohbet */
+			/* Arka plan */
+			.callContainer_cbde45{
+				arka plan: rgb(var(--background));
+			}
+			.wrapper_bd2abe{
+				arka plan: şeffaf;
+			}
+
+			/* Kontroller */
+				/* Arka plan */
+				.gradientContainer__9a5a6{
+					görüntü yok;
+				}
+				.controlSection_daa0d5{
+					opaklık: 1 !önemli;
+					transform: Translate3d(0px, 0px, 0px) !important;
+				}
+
+
+
+/* 4. Keşif --------------------------------------------- -------------------------------------------------- ------- */
+	/* Kenar çubuğu */
+		/* Arka plan */
+		.sidebar_ded4b5{
+			arka plan: rgb(var(--backgroundTint));
+		}
+
+
+	/* BD Eklentisi: BDteam'in genel sunucuları */
+	.bd-sunucu-splash{
+		filtre: bulanıklaştırma(0px) !önemli;
+	}
+
+
+
+/* 5. Kullanıcı profili --------------------------------- -------------------------------------------------- ----- */
+	/* Kullanıcı oturum açtı */
+		/* Konum */
+		.accountProfilePopoutWrapper_af829a{
+			sol: -178 piksel;
+		}
+
+		/* Hesap metnini değiştir */
+		.label__73cb9 {
+			renk: rgb(var(--text));	
+		}
+
+	/* Mini profil */
+		/* Konum */
+		.userPopout-2j1gM4 .mask-1FEkla,
+		.userPopout-2j1gM4 .avatarHint__8e5b9,
+		.userPopout-2j1gM4 .profileBadges__7a7cb,
+		.userPopout-2j1gM4 .date-YN6TCS{
+			z-endeksi: 4;
+		}
+
+		/* Discord hatası: Profil maksimum yükseklik düzeltmesi */
+		.userPopoutOverlayBackground_d8afa4 {
+			maksimum yükseklik: 60vh;
+		}
+
+		/* Durum */
+			/* Konum */
+			.userPopout-2j1gM4 .avatarPositionNormal__1797c .wrapper_edb6e0::before,
+			.userPopout-2j1gM4 .avatarPositionPremium-1zPBq9 .wrapper_edb6e0::before{
+				içerik: '';
+				arka plan: var(--user-standardtus-background) merkez tekrarsız;
+				arka plan boyutu: kapak;
+				konum: sabit;
+				yükseklik: 76 piksel;
+				genişlik: %100;
+				sol: 0 piksel;
+				üst: 60 piksel;
+				işaretçi olayları: yok;
+				z-endeksi: 2;
+			}
+			.wrapper_edb6e0[style*="80px"] rect{
+				genişlik: 80 piksel;
+				yükseklik: 80 piksel;
+				transform:translate(-60px, -60px);
+				kontur genişliği: var(--avatarBorderThickness);
+			}
+				/* Animasyonlu/Özel arka plan konumu düzeltmesi*/
+				.userPopout-2j1gM4 .avatarPositionPremium-1zPBq9 .wrapper_edb6e0::önce,
+				.userPopout-2j1gM4 .avatarPositionPremium-1zPBq9 .wrapper_edb6e0::after{
+					üst: 120 piksel;
+				}
+
+			/* Sınır */
+			.avatar-2Vndt_, /* Profiliniz */
+			.userPopout-2j1gM4{
+				kenarlık: 0 piksel;
+			}
+
+
+		/* Avatarı */
+			/* Arka plan */
+			.wrapper_edb6e0:not([style = "genişlik: 32 piksel; yükseklik: 32 piksel;"]){
+				arka plan: rgb(var(--backgroundTint)) !important;
+				kenarlık yarıçapı: 6px !önemli;
+			}
+
+			/* Maske */
+			yabancıObject[mask="url(#svg-mask-avatar-decoration-status-round-80)"],
+			yabancıObject[mask="url(#svg-mask-avatar-decoration-status-round-120)"],
+			yabancıObject[mask="url(#svg-mask-avatar-status-round-80)"],
+			yabancıObject[mask="url(#svg-mask-avatar-status-round-120)"]{
+				maske: yok;
+			}
+
+			/* Profili görüntüle üzerine gelin */
+				/* Konum */
+				.avatarDecorationHint__03e0b{
+					kenarlık yarıçapı: 6px !önemli;
+					dönüşüm: ölçek(0,85);
+				}		
+				.avatarDecorationHint__03e0b yabancıObject{
+					-webkit maskesi: yok;
+					maske: yok;
+				}
+
+
+	/* Tam profil */
+		/* Konum */
+		.root-8LYsGj .topSection-13QKHs .banner__6d414+.header-S26rhB .wrapper_edb6e0::before{
+			içerik: '';
+			arka plan: var(--user-standardtus-background);
+			konum: sabit;
+			üst kenar boşluğu: 68 piksel;
+			sol: 0 piksel;
+			genişlik: %100;
+			yükseklik: 110 piksel;
+		}
+			/* Durum */
+			.wrapper_edb6e0[style*="120px"] rect{
+				genişlik: 120 piksel;
+				yükseklik: 120 piksel;
+				dönüşüm: tercüme et(-88px, -88px);
+				kontur genişliği: var(--avatarBorderThickness);
+			}
+
+		/* Profil resmi arka planı */
+		.bannerSVGWrapper__3e7b0 > yabancıObject{
+			maske: yok !önemli;
+		}
+
+
+	/* Paylaşıldı */
+		/* Avatarı */
+			/* Konum */
+			.wrapper_edb6e0:not([style*="32px"]) > svg > rect{
+				doldur: şeffaf !önemli;
+				kontur genişliği: var(--avatarBorderThickness);
+			}
+
+			/* Arka plan */
+			.wrapper_edb6e0 svg:not(:root){
+				taşma: görünür;
+			}
+
+			/* Resim */
+			yabancıObject[mask="url(#svg-mask-avatar-standardtus-round-80)"],
+			yabancıObject[mask="url(#svg-mask-avatar-standardtus-round-120)"]{
+				maske: yok !önemli;
+			}
+
+
+		/* Durum */
+		.wrapper_edb6e0 > svg > düzelt{
+			maske: yok;
+			Ekran bloğu;
+			rx: 4 piksel;
+		}
+			/* Metin */
+			.wrapper_edb6e0 > svg > daire{
+				cy: 30 !önemli;
+				cx: 61 !önemli;
+				opaklık: 0 !önemli;
+			}
+
+			/* Renkler */
+			... "], .wrapper_edb6e0 > svg > rect[mask*=online], .wrapper_edb6e0 > svg > rect[fill*="hsl(139"]{
+				vuruş: #43b581;
+				doldur: #43b581;
+			}
+			.wrapper_edb6e0 > svg > rect[fill="#faa61a"], .wrapper_edb6e0 > svg > rect[fill="rgb(250, 166, 26, 1)"], .wrapper_edb6e0 > svg > rect[mask*=idle] , .wrapper_edb6e0 > svg > rect[fill*="hsl(38"]{
+				vuruş: #faa61a;
+				doldur: #faa61a;
+			}
+			.wrapper_edb6e0 > svg > rect[fill="#f04747"], .wrapper_edb6e0 > svg > rect[fill="rgb(240, 71, 71, 1)"], .wrapper_edb6e0 > svg > rect[fill="#ed4245 "], .wrapper_edb6e0 > svg > rect[mask*=dnd], .wrapper_edb6e0 > svg > rect[fill*="hsl(359"]{
+				vuruş: #f04747;
+				doldur: #f04747;
+			}
+			.wrapper_edb6e0 > svg > rect[fill="#593695"], .wrapper_edb6e0 > svg > rect[mask*=streaming]{
+				vuruş: #6423d3;
+				doldur: #6423d3;
+			}
+			.wrapper_edb6e0 > svg > rect[fill="#747f8d"], .wrapper_edb6e0 > svg > rect[mask*=çevrimdışı], .wrapper_edb6e0 > svg > rect[fill=NaN]{
+				vuruş: #40454b;
+				doldurun: #40454b;
+			}
+			.wrapper_edb6e0 > svg > rect[fill="#747f8d"], .wrapper_edb6e0 > svg > rect[mask*=invisible], .wrapper_edb6e0 > svg > rect[fill='rgb(116, 127, 141, 1)"] , .wrapper_edb6e0 > svg > rect[fill*="hsl(214"]{
+				vuruş: #747f8d;
+				doldur: #747f8d;
+			}
+
+
+		/* Bilgi */
+		.overlayBackground-1KgwVi{ /* DM'ler */
+			arka plan: rgb(var(--background));
+		}
+			/* Not metni */
+			.textarea_c5a7a3, /* Tam profil */
+			.textarea_c5a7a3{ /* DM kenar çubuğu */
+				yazı tipi boyutu: 14 piksel !önemli;
+				color: rgb(var(--text)) !important;
+				satır yüksekliği: 20 piksel !önemli;
+			}
+
+
+
+/* 6. Ayarlar --------------------------------------------- -------------------------------------------------- -------- */
+
+/* Sıralamak */
+#app-mount .baseLayer__13b6b {
+	opaklık: 1 !önemli;
+	transform: ayarı kaldır !önemli;
+	will-change: unset !important;
+}
+#app-mount .stop-animations * {
+	geçiş özelliği: miras !önemli;
+	animasyon: miras !önemli;
+}
+#app-mount .layer__2efaa.stop-animations:first-child::after {
+	içerik: "" !önemli;
+	konum: sabit !önemli;
+	arka plan: rgb(var(--contentDialogBackdrop)) !important;
+	üst: 0 !önemli;
+	sağ: 0 !önemli;
+	alt: 0 !önemli;
+	sol: 0 !önemli;
+	kenar boşluğu: 0 !önemli;
+	dolgu: 0 !önemli;
+	opaklık: 0,85 !önemli;
+	z-endeksi: 999 !önemli;
+	işaretçi olayları: yok !önemli;
+}
+	
+#app-mount .layer__2efaa ~ .layer__2efaa .sidebarRegion__60457,
+#app-mount .layer__2efaa ~ .layer__2efaa .sidebarRegionScroller__1fa7e {
+	esnek: 0 0 otomatik !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .repoHeader-2KfNvH {
+	dolgu-alt: 0 !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .repoHeader-2KfNvH .tabBar-2StdUa {
+	boşluk: 30px !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .repoHeader-2KfNvH .quickSelectLabel_cf5c1b {
+	yazı tipi boyutu: 12 piksel !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .repoScroller-9JnAPs {
+	dolgu üst: 0 !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .sidebar_bdf6b7 {
+	height: var(--settingsmodalheight) !important;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .standardSidebarView__1129a .editor {
+	yükseklik: calc(var(--settingsmodalheight) - 120px) !important;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .toolsContainer_f5d55d,
+#app-mount .layer__2efaa ~ .layer__2efaa .toolsContainer_f5d55d .tools_c0ff70,
+#app-mount .layer__2efaa ~ .layer__2efaa .toolsContainer_f5d55d .container_bb0c52 {
+	pozisyon: mutlak !önemli;
+	üst: 0 !önemli;
+	sağ: 0 !önemli;
+	alt: 0 !önemli;
+	sol: 0 !önemli;
+	arka plan: şeffaf !önemli;
+	kenarlık: yok !önemli;
+	sınır yarıçapı: 0 !önemli;
+	genişlik: %100 !önemli;
+	maksimum genişlik: unset !important;
+	yükseklik: %100 !önemli;
+	maksimum yükseklik: ayarlanmamış !önemli;
+	kenar boşluğu: 0 !önemli;
+	dolgu: 0 !önemli;
+	imleç: varsayılan !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .toolsContainer_f5d55d {
+	konum: sabit !önemli;
+	üst: 22px !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .settingsToolbar-wu4yfQ {
+	görüntü: yok !önemli;
+}
+
+#app-mount .layer__2efaa ~ .layer__2efaa .accountProfileCard__22589 {
+	max-width: calc(var(--settingsmodalwidth) - 332px - var(--settingsiconsadditionalsize)) !important;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434 {
+	boşluk: 30px !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434 .sectionsContainer_a37883,
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434 .editor_bca4e3,
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434 .preview__0c5fe {
+	min-width: calc((var(--settingsmodalwidth) - 332px - var(--settingsiconsadditionalsize)) / 2) !important;
+	max-width: calc((var(--settingsmodalwidth) - 332px - var(--settingsiconsadditionalsize)) / 2) !important;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434.tryItOutLayout__6026d .sectionsContainer_a37883,
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434.tryItOutLayout__6026d .editor_bca4e3,
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434.tryItOutLayout__6026d .preview__0c5fe {
+	min-width: calc((var(--settingsmodalwidth) - 344px - var(--settingsiconsadditionalsize)) / 2) !important;
+	max-width: calc((var(--settingsmodalwidth) - 344px - var(--settingsiconsadditionalsize)) / 2) !important;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434 .preview__0c5fe .userPopoutOuter_d739b2 {
+	genişlik: calc((var(--settingsmodalwidth) - 332px - var(--settingsiconsadditionalsize)) / 2) !important;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .baseLayout_b00434.tryItOutLayout__6026d .preview__0c5fe .userPopoutOuter_d739b2 {
+	genişlik: calc((var(--settingsmodalwidth) - 332px - var(--settingsiconsadditionalsize)) / 2) !important;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434 .preview__0c5fe .userPopoutOuter_d739b2,
+#app-mount .layer__2efaa ~ .layer__2efaa .baseLayout_b00434.tryItOutLayout__6026d .preview__0c5fe .userPopoutOuter_d739b2 {
+	minimum genişlik: ayarlanmamış !önemli;
+	maksimum genişlik: 340 piksel !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .profileCustomizationSection__88eff .baseLayout_b00434 .preview__0c5fe .userPopoutInner_f545a3 {
+	taşma: gizli !önemli;
+}
+#app-mount .layer__2efaa ~ .layer__2efaa .settingsContainer-36qZZ9,
+#app-mount .layer__2efaa ~ .layer__2efaa .guildsSection__337a8 {
+	max-width: calc(var(--settingsmodalwidth) - 332px - var(--settingsiconsadditionalsize)) !important;
+}
+
+#app-mount .root__6d24f {
+	konum: sabit !önemli;
+	üst: 0 !önemli;
+	sağ: 0 !önemli;
+	alt: 0 !önemli;
+	sol: 0 !önemli;
+	arka plan: var(--settingsmodalbackground) !important;
+	sınır yarıçapı: 5px !önemli;
+	kutu-gölge: var(--elevation-high) !important;
+	genişlik: var(--settingsmodalwidth) !important;
+	height: var(--settingsmodalheight) !important;
+	kenar boşluğu: otomatik !önemli;
+	dolgu: 0 !önemli;
+	taşma: gizli !önemli;
+	şunu içerir: ayarı kaldır !önemli;
+	z-endeksi: 1000 !önemli;
+}
+#app-mount .root__6d24f.enterDone_a21e0b {
+	transform: ayarı kaldır !önemli;
+}
+#app-mount .perksModal-CLcR1c {
+	pozisyon: statik !önemli;
+	border-radius: ayarlanmamış !önemli;
+	genişlik: %100 !önemli;
+	yükseklik: %100 !önemli;
+	kenar boşluğu: ayarlanmamış !önemli;
+	dolgu: ayarlanmamış !önemli;
+}
+#app-mount .perksModal-CLcR1c::before {
+	genişlik: var(--settingsmodalwidth) !important;
+	height: var(--settingsmodalheight) !important;
+	kenar boşluğu: otomatik !önemli;
+}
+#app-mount .perksModalContentWrapper-3RHugb {
+	dolgu: 10px 0 10px !önemli;
+}
+#app-mount .root__6d24f .perksModal-CLcR1c .carousel-3dvee9 {
+	marj-sol: calc(-0.5 * (100vw - var(--settingsmodalwidth))) !important;
+}
+#app-mount .root__6d24f .closeIconWrapper_e5c34c,
+#app-mount .root__6d24f .closeIconWrapper_e5c34c .container_bb0c52 {
+	pozisyon: mutlak !önemli;
+	üst: 0 !önemli;
+	sağ: 0 !önemli;
+	alt: 0 !önemli;
+	sol: 0 !önemli;
+	arka plan: şeffaf !önemli;
+	kenarlık: yok !önemli;
+	sınır yarıçapı: 0 !önemli;
+	genişlik: %100 !önemli;
+	maksimum genişlik: unset !important;
+	yükseklik: %100 !önemli;
+	maksimum yükseklik: ayarlanmamış !önemli;
+	kenar boşluğu: 0 !önemli;
+	dolgu: 0 !önemli;
+	imleç: varsayılan !önemli;
+}
+#app-mount .root__6d24f .closeIconWrapper_e5c34c {
+	konum: sabit !önemli;
+	üst: 22px !önemli;
+	z-endeksi: -1 !önemli;
+}
+/* Sıralamayı bitirmek için ---- */
+	
+/* Ayarlar modeli penceresi */
+	/* Konum */
+	#app-mount .layer__2efaa ~ .layer__2efaa {
+		pozisyon: mutlak !önemli;
+		max-width: var(--settingsmodalwidth) !important;
+		max-height: var(--settingsmodalheight) !important;
+		kenar boşluğu: otomatik !önemli;
+		dolgu: 34 piksel !önemli;
+		üst: 0 !önemli;
+		sağ: 0 !önemli;
+		alt: 0 !önemli;
+		sol: 0 !önemli;
+		arka plan: var(--settingsmodalbackground) !important;
+		taşma: gizli !önemli;
+		z-endeksi: 1000 !önemli;
+	}
+
+	/* Stil */
+	#app-mount .layer__2efaa ~ .layer__2efaa > div,
+	#app-mount .layer__2efaa ~ .layer__2efaa .standardSidebarView__1129a {
+		pozisyon: statik !önemli;
+		genişlik: %100 !önemli;
+		yükseklik: %100 !önemli;
+		kenarlık yarıçapı: 6px !önemli;
+		taşma: gizli !önemli;
+	}
+
+	/* Arka plan */
+	.standardSidebarView__1129a{
+		arka plan: rgb(var(--backgroundTitlebar)) !important;
+	}
+
+	/* Kapat butonu */
+	.closeButton__34341{
+		konum: sabit;
+		alt: calc(%50 + 300px);
+		transform: TranslateX(524px) !important;
+		kenarlık: yok !önemli;
+		kenarlık yarıçapı: 4px;
+	}
+
+	/* Kenar çubuğu */
+		/* Konum */
+		.sidebar__9e3e2{
+			dolgu: 4 piksel !önemli;
+			genişlik: 256px !önemli;
+		}
+
+		.sidebarBölge__60457{
+			üst kenar boşluğu: 50 piksel;
+			arka plan: şeffaf !önemli;
+			esnek: yok;
+		}
+
+
+		/* Düğmeler */
+			/* Konumlar */
+			.item-3XjbnG{
+				dolgu: 0px;
+			}
+				/* Simge */
+				.premiumLabel_f2cd55 > svg{
+					görüntü yok;
+				}
+				.sidebar__9e3e2 .item-3XjbnG::önce{
+					sol kenar boşluğu: 0 piksel;
+					sağ kenar boşluğu: 12 piksel;
+				}
+				.sidebar__9e3e2 .item-3XjbnG{
+					sol kenar boşluğu: 8 piksel;
+				}
+				.circleIconButton_d8df29 > svg > yol{
+					doldur: rgb(var(--text));
+				}
+
+				/* Daha iyi uyumsuzluk değişim günlüğü */
+				.bd-changelog-düğmesi{
+					konum: mutlak;
+					sol: calc(var(--sidebarWidth) - 42px);
+					alt: 4 piksel;
+					yükseklik: 32px !önemli;
+					genişlik: 32 piksel;
+					kenarlık yarıçapı: 4px;
+					z-endeksi: 10 !önemli;
+				}
+					/* Simge */
+					.bd-changelog-button > svg{
+						marj: %25;
+						üst kenar boşluğu: 7 piksel;
+						dönüşüm: ölçek(1,25);
+						doldur: rgb(var(--text)) !important;
+					}
+
+			/* Seçilmemiş */
+			.brand-3g5E0C.item-3XjbnG, .themed-2-lozF.item-3XjbnG{
+				color: rgb(var(--text)) !important;
+			}
+		
+			/* Vurgulu */
+			.item-3XjbnG: üzerine gelin,
+			.wrappedLayout_fd7073:hover{
+				arka plan: rgb(var(--sidebarButtonHover)) !important;
+			}
+				/* Daha iyi uyumsuzluk değişim günlüğü */
+				.bd-changelog-button:hover{
+					arka plan: rgb(var(--buttonHover));
+					imleç: işaretçi;
+				}
+
+
+			/* Seçildi */
+			.item-3XjbnG.selected-g-kMVV,
+			.categoryItem_b1be5c.selectedCategoryItem__0bf4c .itemInner__9e755{
+				arka plan: rgb(var(--sidebarButtonHover)) !important;
+			}
+			.channel_c21703.selected__9800b:before, .modeSelected__487d6::before, .selectedCategoryItem__0bf4c::before{
+				yükseklik: 28 piksel;
+				genişlik: 4 piksel;
+				üst kenar boşluğu: 4 piksel;
+				sol kenar boşluğu: 4 piksel;
+				kenarlık yarıçapı: 4px;
+			}
+				/* Hap */
+				.iconContainer__3f9b0::sonra{
+					yükseklik: 16 piksel;
+					genişlik: 3 piksel;
+					arka plan: var(--os-accent-color, #4cc2ff);
+					sınır yarıçapı: %25;
+				}
+
+			/* Seçilmiş + Üzerine gelinmiş */
+			.item-3XjbnG.selected-g-kMVV.themed-2-lozF, .premiumTabItem-1QTfBr[aria-selected=true]{
+				arka plan: rgb(var(--buttonHover));	
+			}
+
+
+	/* İçerik */
+		/* Konum */
+		.contentBölge__0bec1{
+			üst dolgu: 50 piksel;
+			arka plan: şeffaf !önemli;
+		}
+			/* Bölüm kaydırmayı düzeltin */
+			.contentColumn_dc7d36{
+				z-endeksi: 100;
+			}
+
+			.contentWidth_b55791, .customScroller_f72801>div /* Sunucu ayarları: Roller */
+			.repoHeader-2KfNvH, /* BD Eklentisi: BD Eklentisi ve DevilBro'nun tema deposu */
+			.standardSidebarView__1129a .contentColumnDefault_c66386{
+				dolgu: 0px;
+				dolgu üst: 8 piksel;
+				kenar boşluğu: 0 otomatik !önemli;
+			}
+
+		/* Arka plan */
+		.contentRegionScroller__86c79{
+			arka plan: rgb(var(--background));
+		}
+
+		/* Bölümler */
+		.layer__2efaa.layer__2efaa ~ .layer__2efaa .container-1zDvAE,
+		.layer__2efaa.layer__2efaa ~ .layer__2efaa .title-3hptVQ.marginBottom8_f4aae3 + .description-30xx7u.formText-2ngGjI, .layer__2efaa.layer__2efaa ~ .layer__2efaa .title-3hptVQ.defaultMarginh3-2aILfT + .de scription-30xx7u.formText-2ngGjI{ /* Discord'un çalışmasını sağlayacak veriler */
+			arka plan: rgb(var(--buttonCatagoryStandard));
+			kenarlık yarıçapı: 6px;
+			kenarlık: 1px katı var(--border);
+			dolgu: 18 piksel;
+			kenar boşluğu alt: 4 piksel;
+		}
+			/* Bölüm başlığı */
+			.bd-ayarlar-başlığı,
+			.layer__2efaa.layer__2efaa ~ .layer__2efaa .container-1zDvAE .title-2dsDLn{
+				renk: rgb(var(--text));
+				yazı tipi ağırlığı: 400;
+			}
+			.layer__2efaa.layer__2efaa ~ .layer__2efaa [sınıf^=marj] > .title-3hptVQ,
+			.layer__2efaa.layer__2efaa ~ .layer__2efaa .marginTop40__2b1fe > .sectionTitle-3j2YI1 > .title-3hptVQ,
+			.layer__2efaa.layer__2efaa ~ .layer__2efaa .title-3hptVQ.marginBottom8_f4aae3,
+			.layer__2efaa.layer__2efaa ~ .layer__2efaa .sectionTitle-3j2YI1 .title-3hptVQ:not(h1){
+				üst kenar boşluğu: 42 piksel;
+				kenar boşluğu alt: 12 piksel;
+				metin dönüşümü: yok;
+				renk: rgb(var(--text));
+				satır yüksekliği: var(--line-height-md);
+			}
+
+			/* Seçenek kenar boşlukları */
+			.marginTop20_d88ee7,
+			.layer__2efaa.layer__2efaa ~ .layer__2efaa .container-1zDvAE + .title-3hptVQ, .layer__2efaa.layer__2efaa ~ .layer__2efaa .container-1zDvAE + div[class^=margin]:not(.container-1zDvAE),
+			.layer__2efaa.layer__2efaa ~ .layer__2efaa [sınıf^=kenar boşluğu] + [sınıf^=kenar boşluğu],
+			.layer__2efaa.layer__2efaa ~ .layer__2efaa .children_b15c64 > [class^=marginBottom]:not(:only-child):first-child{
+				üst kenar boşluğu: 4 piksel;
+				kenar boşluğu alt: 0 piksel;
+			}
+
+			/* Animasyonu yükle */
+			.layer__2efaa.layer__2efaa ~ .layer__2efaa .contentColumn_dc7d36:not(.contentColumnMinimal__03b19) > div{
+				animasyon: ayarlar 0,25 saniyede ileri doğru hareket eder;
+			}
+
+
+		/* Daraltılabilir gruplar */
+			/* Başlık */
+				/* Seçilmemiş */
+				.container__11d72 .topPill-3DJJNV .item-3XjbnG[aria-controls="add_friend-tab"], /* Arkadaşlar listesi: Arkadaş ekle*/
+				.container__11d72 .topPill-3DJJNV .item-3XjbnG
+				.tabBarItem_b56b35, .tabBarItem_b56b35:hover, /* Tam kullanıcı profili */
+				.tabBarContainer-sCZC4w .top-K_jibn .selected-g-kMVV.item-3XjbnG
+				.root-8LYsGj .tabBarContainer-sCZC4w .top-K_jibn{
+					yükseklik: 10 piksel;
+					dolgu: 10 piksel !önemli;
+					arka plan: şeffaf !önemli;
+					kenarlık: yok !önemli;
+				}
+				.bd-settings-group~.bd-settings-group .bd-settings-title{
+					kenar boşluğu: 0 piksel;
+					arka plan: rgb(var(--contentDialogFooterHeader)) !important;
+				}
+				.bd-settings-group-title:hover{
+					arka plan: var(--buttonAccentHover) !important;
+					dönüşüm: ölçek(1,005);
+					geçiş: var(--colorTransition);
+					kenarlık yarıçapı: 6px;
+				}
+				.bd-settings-group.collapsible{
+					üst kenar boşluğu: 6 piksel;
+					arka plan: rgb(var(--contentDialogFooterHeader));
+					kenarlık yarıçapı: 6px;
+					kenarlık: 1px katı var(--border);
+				}
+				.bd-settings-title.bd-settings-group-title{
+					yükseklik: 69 piksel;
+					kenar boşluğu: 0 piksel;
+					dolgu: %0,25 16 piksel 0 piksel 72 piksel;
+					renk: rgb(var(--text));
+				}
+
+				/* Vurgulu */
+				.container__11d72 .topPill-3DJJNV .item-3XjbnG:hover[aria-controls="add_friend-tab"], /* Arkadaşlar listesi: Arkadaş ekle*/
+				.container__11d72 .topPill-3DJJNV .themed-2-lozF.item-3XjbnG:hover{ /* Arkadaş listesi */
+					arka plan: şeffaf !önemli;
+				}
+
+				/* Seçildi */
+				.container__11d72 .topPill-3DJJNV .item-3XjbnG[style="color: hsl(139, calc(var(--saturation-factor, 1) * 47,3%), 43,9%));"], /* Arkadaş listesi: Ekle arkadaş*/
+				.container__11d72 .topPill-3DJJNV .item-3XjbnG.selected-g-kMVV, .container__11d72 .topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG /* Arkadaş listesi */
+				.layer-2aCOJ3 .header__28ebb .topPill-3DJJNV .tab_a8a066.active__7e7af,
+				.root-8LYsGj .tabBarContainer-sCZC4w .top-K_jibn .selected-g-kMVV.item-3XjbnG /* Tam kullanıcı profili */{
+					arka plan: şeffaf;
+					border-bottom: 2px katı var(--os-accent-color, #4cc2ff) !important;
+				}
+
+				/* Ok animasyonu */
+				.bd-settings-group.collapsed .bd-settings-title::after{
+					geçiş: 0,1 saniyelik dönüşüm kolaylığı;
+					dönüştürme: döndürme (180 derece);
+				}
+
+
+			/* Alt seçenekler */
+				/* Arka plan */
+				.bd-ayarları-konteyner{
+					arka plan: rgb(var(--contentDialogContent));
+					border-top: 1px katı var(--border);
+					kenar-alt-sol-yarıçap: 6px;
+					kenar-alt-sağ-yarıçap: 6px;
+				}
+
+				/* Standart */
+					.bd-ayar-öğesi{
+						yükseklik: 50px !önemli;
+						kenar boşluğu: 0 piksel;
+						üst kenar boşluğu: 1 piksel !önemli;
+						dolgu: 13 piksel 16 piksel 0 piksel 72 piksel;
+						arka plan: rgb(var(--contentDialogContent));
+						kenarlık yarıçapı: 4px;
+					}
+						/* Tanım */
+						.bd-ayar-notu{
+							görüntü: yok !önemli;
+						}
+						/* Boşluk */
+						.bd-ayar-bölücü,
+						.bd-settings-group.collapsible .bd-settings-title::before{
+							arka plan: şeffaf;
+							kenarlık rengi: şeffaf;
+							kenar boşluğu: 0 piksel;
+						}
+
+				/* Vurgulu */
+				.bd-ayar-öğesi:hover{
+					arka plan: rgb(var(--buttonHover));
+				}
+
+		/* Discord ayarları */
+			/* Hesabım */
+				/* Profil başlığı */
+				.layer__2efaa ~ .layer__2efaa .userInfo__8f826 > düğme{
+					konum: mutlak;
+					genişlik: %100;
+					yükseklik: %100;
+					sol: 0;
+					arka plan: rgb(var(--contentDialogFooterHeader)) !important;
+					kenarlık: yok !önemli;
+					kutu gölgesi: yok !önemli;
+					ekran: esnek;
+					renk: rgb(var(--text));
+					dolgu: 0 0 0 60px;
+					z-endeksi: 0;
+				}
+					/* Metin */
+					.layer__2efaa ~ .layer__2efaa .userInfo__8f826 > div:nth-child(2)::before{
+						içerik: "Profil";
+						renk: rgb(var(--text));
+
+						kenar boşluğu: 0;
+						metin dönüşümü: yok;
+						Ekran bloğu;
+					}
+					.layer__2efaa ~ .layer__2efaa .userInfo__8f826 > div:nth-child(2)::after{
+						içerik: "Avatar, banner, hakkımda, profil rengi";
+						Ekran bloğu;
+
+						renk: rgb(var(--text));
+						üst kenar boşluğu: 4 piksel;
+					}
+
+					/* Alt ayarlar */
+					.layer__2efaa ~ .layer__2efaa .fieldList_aab0de{
+						arka plan: rgb(var(--contentDialogContent));
+						sınır yarıçapı: 0px;
+					}
+
+
+				/* Premium Banner */
+				.settingsBanner-2E5fAp[style*="background-image:"]{
+					yükseklik: 290 piksel;
+					genişlik: 744 piksel;
+					sol kenar boşluğu: -2px;
+					sınır yarıçapı: 2px 2px 0px 0px;
+				}
+				.settingsBanner__8c4ee[style*="background-image:"]+.userInfo__8f826 .avatar__6c108{
+					üst kenar boşluğu: 190 piksel;
+				}
+				/* Avatarı */
+				.avatar__6c108{
+					kenarlık: 0 piksel;
+				}
+
+				/* Düğmeler */
+				.layer__2efaa ~ .layer__2efaa .userInfo__8f826{
+					dolgu: 18 piksel;
+					kenar boşluğu: 0 0 4 piksel 0;
+					yükseklik: otomatik;
+					arka plan: rgb(var(--contentDialogFooterHeader));
+					ekran: esnek;
+					esnek yön: satır;
+					hizalama öğeleri: merkez;
+					boşluk: 0 18 piksel;
+					konum: göreceli;
+				}
+				.layer__2efaa ~ .layer__2efaa .userInfo__8f826 .avatar__6c108{
+					genişlik: 22px !önemli;
+					yükseklik: 22 piksel !önemli;
+					arka plan: rgb(var(--text)) !important;
+					sınır: yok;
+					konum: göreceli;
+					z-endeksi: 1;
+					üst: 0;
+					sol: 0;
+					-webkit-mask: url('data:image/svg+xml; utf-8,<svg viewBox = "0 0 24 24" xmlns = "http://www.w3.org/2000/svg"><yol d = "M21.03 2.97a3.578 3.578 0 0 1 0 5.06L9.062 20a2.25 2.25 0 0 1-.999.58l-5.116 1.395a.75.75 0 0 1-.92-.921l1.395-5.116a2 .25 2.25 0 0 1 .58-.999L15.97 2.97a3.578 3.578 0 0 1 5.06 0ZM15 6.06 5.062 16a.75.75 0 0 0-.193.333l-1.05 3.85 3.85-1.05A 0,75,75 0 0 0 8 18,938L17 .94 9 15 6.06Zm2.03-2.03-.97.97L19 7.94l.97-.97a2.079 2.079 0 0 0-2.94-2.94Z" /></svg>') merkez/kapak;
+				}
+
+				.layer__2efaa ~ .layer__2efaa .userInfo__8f826 .avatar__6c108 svg{
+					görüntü yok;
+				}
+				.layer__2efaa ~ .layer__2efaa .userInfo__8f826 > div:nth-child(2){
+					konum: göreceli;
+					z-endeksi: 1;
+					esnek: 1;
+					işaretçi olayları: yok;
+				}
+				.layer__2efaa ~ .layer__2efaa .userInfo__8f826 > div:nth-child(2) > div{
+					görüntü yok;
+				}
+
+			
+
+				.layer__2efaa ~ .layer__2efaa .userInfo__8f826 > düğme div{
+					genişlik: %100;
+					yazı tipi boyutu: 0;
+					sağ dolgu: 18px;
+					ekran: esnek;
+					yasla-içerik: esnek uç;
+					hizalama öğeleri: merkez;
+				}
+				.layer__2efaa ~ .layer__2efaa .userInfo__8f826 > düğme div::önce{
+					içerik: "";
+					genişlik: 16 piksel;
+					yükseklik: 16 piksel;
+					-webkit-mask: url('data:image/svg+xml; utf-8,<svg viewBox = "0 0 24 24" xmlns = "http://www.w3.org/2000/svg"><yol d = "M8.47 4.22a.75.75 0 0 0 0 1.06L15.19 12l-6.72 6.72a.75.75 0 1 0 1.06 1.06l7.25-7.25a.75.75 0 0 0 0-1.06L9.53 4.22a. 75,75 0 0 0-1,06 0Z" /></svg>') merkez/kapak;
+					arka plan: rgb(var(--text));
+					Ekran bloğu;
+				}
+				.layer__2efaa ~ .layer__2efaa .background_b61fcc{
+					kenar boşluğu: 0;
+					arka plan: şeffaf;
+					dolgu: 0;
+				}
+				.layer__2efaa ~ .layer__2efaa .field__9e8e2{
+					dolgu: 18 piksel;
+					üst kenar boşluğu: 4 piksel !önemli;
+					ekran: esnek;
+					esnek yön: satır;
+					hizalama öğeleri: merkez;
+					boşluk: 0 18 piksel;
+					konum: göreceli;
+				}
+					/* Simgeler */
+					.layer__2efaa ~ .layer__2efaa .fieldList_aab0de .field__9e8e2:first-child::before{
+						-webkit-mask-image: url('data:image/svg+xml; utf-8,<svg viewBox = "0 0 24 24" xmlns = "http://www.w3.org/2000/svg"> <yol d = "M17.754 14a2.249 2.249 0 0 1 2.25 2.249v.575c0 .894-.32 1.76-.902 2.438-1.57 1.834-3.957 2.739-7.102 2.739-3.146 0-5.5 32-.905-7.098- 2.74a3.75 3.75 0 0 1-.898-2.435v-.577a2.249 2.249 0 0 1 2.249-2.25h11.501Zm0 1.5H6.253a.749.749 0 0 0-.75.749v.577c0 .536 0,192 1,054,54 1,461 1.253 1.468 3.219 2.214 5.957 2.214s4.706-.746 5.962-2.214a2.25 2.25 0 0 0 .541-1.463v-.575a.749.749 0 0 0-.749-.75ZM12 2 .004a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" /></svg>');
+					}
+					.layer__2efaa ~ .layer__2efaa .fieldList_aab0de .field__9e8e2:nth-child(2)::before{
+						-webkit-mask-image: url('data:image/svg+xml; utf-8,<svg viewBox = "0 0 24 24" xmlns = "http://www.w3.org/2000/svg"> <yol d = "M5.25 4h13.5a3.25 3,25 0 0 1 3,245 3,066L22 7,25v9.5a3.25 3,25 0 0 1-3,066 3,245L18,75 20H5.25a3.25 3,25 0 0 1-3.245-3 .066L2 16.75v-9.5a3.25 3.25 0 0 1 3.066-3.245L5.25 4h13.5-13.5ZM20.5 9.373l-8.15 4.29a.75.75 0 0 1-.603.043l-.096-.042L3.5 9.374 v7 .376a1.75 1.75 0 0 0 1.606 1.744l.144.006h13.5a1.75 1.75 0 0 0 1.744-1.607l.006-.143V9.373ZM18.75 5.5H5.25a1.75 1.75 0 0 0-1.744 1.606L3. 5 7.25v.429l8.5 4.473 8.5-4.474V7.25a1.75 1.75 0 0 0-1.607-1.744L18.75 5.5Z" /></svg>');
+					}
+					.layer__2efaa ~ .layer__2efaa .fieldList_aab0de .field__9e8e2:last-child::before{
+						-webkit-mask-image: url('data:image/svg+xml; utf-8,<svg viewBox = "0 0 24 24" xmlns = "http://www.w3.org/2000/svg"> <yol d = "M15.75 2A2.25 2,25 0 0 1 18 4.25v15.5A2.25 2,25 0 0 1 15,75 22h-7.5A2.25 2,25 0 0 1 6 19.75V4.25A2.25 2,25 0 0 1 8,25 2h7 .5Zm0 1.5h-7.5a.75.75 0 0 0-.75.75v15.5c0 .414.336.75.75.75h7.5a.75.75 0 0 0 .75-.75V4.25a.75.75 0 0 0-.75-.75Zm- 2.501 14a.75.75 0 0 1 .002 1.5l-2.5.004a.75.75 0 0 1-.002-1.5l2.5-.004Z" /></svg>');
+					}
+
+
+				/* Şifre ve kimlik doğrulama */
+					/* Düğme */
+					.changePasswordButton-3BNRIw{
+						kenar boşluğu: 0 piksel;
+						üst kenar boşluğu: -51 piksel;
+						kenar boşluğu-sol: %80;
+					}
+
+				/* İki faktörlü kimlik doğrulama */
+					/* Durum */
+					.h5-2RwDNl{
+						görüntü yok;
+					}
+					/* Simge */
+					.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 > .children_b15c64 > div:last-child > div > div > .modeDefault-2fEh7a::after{
+						içerik: "";
+						genişlik: 22 piksel;
+						yükseklik: 22 piksel;
+						-webkit-maske-boyutu: kapak;
+						-webkit-maske-pozisyonu: merkez;
+						arka plan: rgb(var(--text));
+						Ekran bloğu;
+						-webkit-mask-image: url('data:image/svg+xml; utf-8,<svg viewBox = "0 0 24 24" xmlns = "http://www.w3.org/2000/svg"> <yol d = "M12 2a4 4 0 0 1 4 4v2h1.75A2.25 2,25 0 0 1 20 10.25v9.5A2.25 2,25 0 0 1 17,75 22H6.25A2.25 2,25 0 0 1 4 19.75v-9.5A2.2 5 2,25 0 0 1 6,25 8H8V6a4 4 0 0 1 4-4Zm5.75 7.5H6.25a.75.75 0 0 0-.75.75v9.5c0 .414.336.75.75.75h11.5a.75.75 0 0 0 .75-.75v -9.5 a.75.75 0 0 0-.75-.75Zm-5.75 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0-10A2.5 2.5 0 0 0 9.5 6v2h5V6A2.5 2.5 0 0 0 12 3.5Z " /></svg>');
+						konum: mutlak;
+						üst: %50;
+						dönüştürme: TranslateY(-%50);
+						sol: 18 piksel;
+					}
+					/* Başlık metni */
+					.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 > .children_b15c64 > div:last-child > div > div > .modeDefault-2fEh7a::before{
+						içerik: "İki faktörlü kimlik doğrulama";
+						renk: rgb(var(--text));
+						yazı tipi ağırlığı: var(--font-weight-regular);
+						kenar boşluğu: 0;
+						metin dönüşümü: yok;
+						Ekran bloğu;
+					}
+					/* Açıklama metni */
+					.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 > .children_b15c64 > div:last-child > div > div > .modeDefault-2fEh7a{
+						üst kenar boşluğu: 4 piksel;
+						dolgu: 16px 348px 16px 64px !önemli;
+						arka plan: rgb(var(--buttonCatagoryStandard));
+						kenarlık: 1px katı var(--border);
+						esnek yön: sütun;
+						konum: göreceli;
+						renk: rgb(var(--text));
+						kenarlık yarıçapı: 6px 6px 0 0;
+						kenar boşluğu alt: 0;
+					}
+
+						/* SMS kurtarma */
+						.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 > .children_b15c64 > div:last-child > div > div > .marginTop40__2b1fe .children_b15c64 .modeDefault-2fEh7a:first-child::before{
+							içerik: "SMS yedeklemesi";
+							renk: rgb(var(--text));
+							yazı tipi ağırlığı: var(--font-weight-regular);
+							kenar boşluğu: 0;
+							metin dönüşümü: yok;
+							Ekran bloğu;
+							kenar boşluğu alt: 4 piksel;
+						}
+						.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 > .children_b15c64 > div:last-child > div > div > .marginTop40__2b1fe .children_b15c64 .flex_f5fbb7{
+							dolgu: 18 piksel;
+							border-top: 1px katı var(--border);
+							kenar boşluğu: 16 piksel -60 piksel -18 piksel;
+							genişlik: calc(100% + 78px);
+							esnek yön: satır tersi;
+							boşluk: 18 piksel;
+						}
+						.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 > .children_b15c64 > div:last-child > div > div > .marginTop40__2b1fe .children_b15c64 .flex_f5fbb7 .lookFilled-1Gx00P.colorBrand-3pXr91{
+							border-radius: var(--btn-radius);
+							dolgu: 4 piksel 10 piksel;
+							satır yüksekliği: 20 piksel;
+							ekran: satır içi esnek;
+							hizalama öğeleri: merkez;
+							kutu boyutlandırma: kenarlık kutusu;
+							metin dekorasyonu: yok;
+							arka plan: var(--btn-bg);
+							yazı tipi ağırlığı: var(--font-weight-regular);
+							renk: rgb(var(--text));
+							kutu gölgesi: yok !önemli;
+							kenarlık: 1px katı var(--btn-border-x);
+							border-top-color: var(--btn-border-t);
+							kenarlık-alt-renk: var(--btn-border-b);
+							imleç: var(--imleç);
+						}
+						.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 > .children_b15c64 > div:last-child > div > div > .marginTop40__2b1fe .children_b15c64 .flex_f5fbb7 .lookFilled-1Gx00P.colorBrand-3pXr91:hover{
+							arka plan: var(--btn-bg-hover);
+							border-color: var(--btn-border-t) var(--btn-border-x) var(--btn-border-b);
+						}
+						.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 > .children_b15c64 > div:last-child > div > div > .marginTop40__2b1fe .children_b15c64 .flex_f5fbb7 .lookFilled-1Gx00P.colorBrand-3pXr91:active{
+							arka plan: var(--btn-bg-active) !important;
+							kenarlık rengi: var(--btn-border-active);
+						}
+
+				/* Hesabı devre dışı bırak */
+					/* Simge */
+					.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 ~ .marginTop40__2b1fe .children_b15c64::before{
+						içerik: "";
+						genişlik: 22 piksel;
+						yükseklik: 22 piksel;
+						-webkit-maske-boyutu: kapak;
+						-webkit-maske-pozisyonu: merkez;
+						arka plan: rgb(var(--text));
+						Ekran bloğu;
+						-webkit-mask-image: url('data:image/svg+xml; utf-8,<svg viewBox = "0 0 24 24" xmlns = "http://www.w3.org/2000/svg"> <yol d = "M17.5 12a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm-5.478 2a6.474 6.474 0 0 0-.708 1.5h-7.06a.75.75 0 0 0-.75.75 v.907c0 .656.286 1.279.783 1.706C5.545 19.945 7.44 20.501 10 20.501c.599 0 1.162-.03 1.688-.091.25.5.563.964.93 1.38-.803. 141-1.676.21-2.618.21-2.89 0-5.128 -.656-6.691-2a3.75 3.75 0 0 1-1.305-2.843v-.907A2.25 2.25 0 0 1 4.254 14h7.768Zm3.071.966-.07.058-.057.07a.5.5 0 0 0 0 .56 8l.058.069 1,77 1,77-1,768 1,766-.057.07a.5.5 0 0 0 0 .568l.058.07.069.057a.5.5 0 0 0 .568 0l.07-.058 1.766-1.767 1.77 1.77.069.058a 0,5,5 0 0 0 0,568 0l.07-.058.058-.07a.5.5 0 0 0 0-.568l-.058-.07-1.77-1.768 1.772-1.77.058-.07a.5.5 0 0 0 0-.568l-.058-. 069-.069-.058a.5.5 0 0 0-.569 0l-.069.058-1.771 1.77-1.77-1.77-.07-.058a.5.5 0 0 0-.492-.043l-.076.043ZM10 2.004a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" /></svg>');
+					}
+
+					/* "Bulmak" */
+					.layer__2efaa ~ .layer__2efaa .userSettingsSecurity__03e70 ~ .marginTop40__2b1fe .children_b15c64{
+						arka plan: rgb(var(--buttonCatagoryStandard));
+						kenarlık: 1px katı var(--border);
+						kenarlık yarıçapı: 6px;
+						dolgu: 18 piksel;
+						ekran: esnek;
+						esnek yön: satır;
+						hizalama öğeleri: merkez;
+						boşluk: 0 18 piksel;
+						konum: göreceli;
+					}
+
+
+			/* Profil */
+				/* Düzen */
+				.baseLayout-8AMrwn{
+					ekran: satır içi;
+				}
+				.contentColumnWide_f71d35 {
+					dolgu: 0px;
+					dolgu üst: 8 piksel;
+					kenar boşluğu: 0 otomatik;	
+				}
+
+				/* Kullanıcı profili */
+					/* Nitro başlığı */
+					.tryItOutSection__0f9fb {
+						genişlik: %100;
+						kenar boşluğu: 0 piksel;
+						dolgu: 0px;
+					}
+					.background-3N0xBT{
+						genişlik: %100;
+						kenar boşluğu: 0 piksel;
+						dolgu: 24 piksel;
+					}
+
+
+				/* Sunucu profili */
+					/* Sunucu açılır menüsünü seç */
+					.wrapper-1b33hy{
+						genişlik: 350 piksel;
+					}
+
+
+			/* Gizlilik ve Güvenlik */
+				/* Veri isteği bildirimi */
+				.card-2U-33X .cardPrimary-3qRT__ .card-16VQ8C > .colorStandard-21JIj7 .size16-rrJ6ag{
+					arka plan: #00b118;
+				}
+
+
+			/* Yetkili uygulamalar */
+				/* Uygulamalar eklendi */
+				.cardPrimary_cb7a0e.outline_cb0aed {
+					arka plan: rgb(var(--contextBackground));
+					kenarlık: var(--border);
+				}
+
+				/* Yetkiyi kaldır butonu */
+				.deleteApp__18070{
+					opaklık: 1 !önemli;
+				}
+
+
+			/* nitro */
+			.hero-1aNo0v, /* Resim */
+			.featuresHeader-2bjq5B{ /* Başlık */
+				kenar boşluğu: 0 otomatik !önemli;
+			}
+		
+		
+			/* Bağlantılar */
+				/* Hesap ekle */
+				.connectContainer__8050b{
+					arka plan: rgb(var(--contextBackground));
+				}
+					/* Düğme */
+					.accountButtonInner__80e3a{
+						arka plan rengi: rgb(var(--buttonStandard));
+						kenarlık yarıçapı: 4px;
+					}
+					.accountButtonInner__80e3a:hover{
+						arka plan rengi: rgb(var(--buttonHover));
+					}
+					.accountButtonInner__80e3a:focus-within{
+						arka plan rengi: rgb(var(--buttonSelected));
+					}
+
+				/* Başlık */
+				.connectionHeader__3c82d{
+					arka plan: rgb(var(--contentDialogFooterHeader));
+				}
+
+				/* Ayarlar */
+				.connectionOptionsWrapper_abe849{
+					arka plan: rgb(var(--contentDialogContent));
+				}
+
+
+			/* Ulaşılabilirlik */
+				/* Ön izleme */
+				.previewMessage__1075c{
+					arka plan: rgb(var(--background));
+				}
+				.message__80c10:hover{
+					arka plan: rgb(var(--sidebarButtonHover)) !important;
+					kenarlık yarıçapı: 4px;
+				}
+
+				/* Metinden konuşmaya önizleme düğmesi */
+				.lookFilled-1Gx00P.colorBrandNew-g5lmBU:hover,
+				.lookFilled-1Gx00P.colorBrandNew-g5lmBU{
+					arka plan: var(--os-accent-color, #4cc2ff);
+				}
+
+
+			/* Ses ve Görüntü */
+				/* Mikrofon testi */
+					/* Çubuk yüksekliği */
+					.wrapper__61220{
+						yükseklik: 6 piksel;
+						genişlik: %88;
+						üst kenar boşluğu: -18 piksel;
+						kenarlık yarıçapı: 4px;
+					}
+						/* Giriş çubuğu */
+						.container__6d33c{
+							yükseklik: 6 piksel;
+							arka plan: var(--os-accent-color, #4cc2ff) !important;
+						}
+							/* Arka plan */
+							.progress__2cc1d{
+								arka plan: rgb(var(--sidebarButtonHover)) !important;
+							}
+							/* Kaplama resmi */
+							.çentikler__065e9.gray__4fb3f{
+								görüntü yok;
+							}
+
+				/* Video arka planları */
+					/* Arka plan */
+					.backgroundOptionInner-TuavSG{
+						arka plan: rgb(var(--sidebarButtonHover));
+					}
+
+					/* Vurgulu */
+					.backgroundOptionRing-2wxJ7j:hover{
+						border-color: var(--os-accent-color, #4cc2ff) !important;
+					}
+
+					/* Seçildi */
+					.backgroundOptionRing-2wxJ7j{
+						kenarlık: 6px katı var(--os-accent-color, #4cc2ff);
+						kenarlık yarıçapı: 8 piksel;
+					}
+			
+				/* Gelişmiş */
+					.formNotice-2nS8ey, /* Krisp notice */
+					.marginBottom20__64605:has(.colorStandard-21JIj7.size14-3fJ-ot.h5-2RwDNl.title-3hptVQ.defaultMarginh5-3Jxf6f) /* Ses Codec Bileşeni */{
+						görüntü yok;
+					}
+		
+
+			/* Etkinlik Durumu */
+				/* Kaldır butonu */
+				.removeGame_aa12f1{
+					üst kenar boşluğu: 38 piksel;
+					sağ kenar boşluğu: 32 piksel;
+					opaklık: 1 !önemli;
+					arka plan: şeffaf !önemli;
+				}
+
+				/* Yer Paylaşımı Geçişi */
+				.overlayToggleIcon-1WRcQ9{
+					sağ kenar boşluğu: 46 piksel;
+				}
+					/* Metin */
+					.overlayStatusText__61367{
+						görüntü yok;
+					}
+
+
+			/* Daha iyi uyumsuzluk: Güncellemeler */
+			.bd-ayarları-konteyner{
+				dolgu-alt: 8 piksel;
+			}
+
+
+			/* BD Plugin: BD Plugin ve DevilBro'nun tema deposu */
+			.repo-k8F4Sd{
+				arka plan: rgb(var(--background));
+				z-endeksi: 1;
+			}
+
+				/* Başlık */
+				.bd-addon-başlığı{
+					yükseklik: 60 piksel;
+					border-bottom: 1px katı var(--border) !important;
+					arka plan: rgb(var(--contentDialogFooterHeader)) !important;
+				}
+
+				/* Kartlar */
+					/* Konum */
+					.list-QuW8QR{
+						genişlik: %95;
+						kenar boşluğu: 0 otomatik;
+					}
+
+					.bd-addon-kartı{
+						yükseklik: 150 piksel;
+						kenar boşluğu: 0px !önemli;
+						üst kenar boşluğu: 6 piksel !önemli;
+						dolgu: 0px !önemli;
+					}
+					.bd-addon-list.bd-grid-view{ /* Izgara görünümü kartlarının genişliği */
+						ızgara şablonu sütunları: %49,35 %49,35;
+					}
+						/* Repo yüksekliği düzeltmesi */
+						.repoList-9JnAPs .contentRegionScroller__86c79{
+							yükseklik: %92 !önemli;
+						}
+
+					/* Arka plan */
+					.card-x5zW6z{
+						arka plan: rgb(var(--buttonStandard)) !important;
+						kenarlık: yok !önemli;
+					}
+
+
+		/* Sunucu ayarları */
+			/* Roller */
+			.customContainer__93c7c{
+				üst: 50 piksel
+			}
+
+			/* Audi günlüğü */
+			.scroller__502b1{
+				arka plan: rgb(var(--background));
+			}
+
+			.customHeader__11c0b{
+				dolgu üst: 8 piksel;
+			}
+
+			/* Sunucu Abonelikleri */
+			.container__9547a{
+				kenar boşluğu: 0 otomatik;
+			}
+
+
+			/* Genişletilmiş arka plan */
+			.bd-addon-kartı{
+				arka plan: rgb(var(--contentDialogContent)) !important;
+				kenarlık: 1px katı var(--border);
+			}
+
+			/* Öğe */
+			.bd-description-wrap, .bd-footer{
+				yükseklik: 32 piksel;
+				arka plan: rgb(var(--contentDialogContent));
+			}
+			.bd-açıklaması{
+				color: rgb(var(--text)) !important;
+			}
+			.bd-altbilgi{
+				kenar-alt-sol-yarıçap: 6px;
+				kenar-alt-sağ-yarıçap: 6px;
+			}
+
+
+/* 7. Bilgi çubuğu --------------------------------- -------------------------------------------------- --------- */
+	/* Bilgi */
+	.newMessagesBar__8b6d7.barBase__4e0ba{
+		genişlik: %75;
+		maksimum genişlik: 576 piksel;
+		yükseklik: 52px !önemli;
+		üst: 6 piksel;
+		kenar boşluğu: 0 otomatik;
+		sol dolgu: 42px;
+		arka plan: rgb(var(--infobarSuccess));
+		kenarlık yarıçapı: 4px;
+		opaklık: 1;
+	}
+
+	/* Başarı */
+
+
+	/* Uyarı */
+		/* 10 dakikalığına üye olun */
+		.wrapper_fbbb73{
+			kenarlık yarıçapı: 4px;
+			arka plan: rgb(var(--infobarWarning));
+			renk: rgb(var(--text));
+		}
+			/* Metin */
+			.title__77790{
+				sol kenar boşluğu: 38 piksel;
+			}
+			.countdown_a8f1ae{
+				color: rgb(var(--text)) !important;
+			}
+
+		/* Ses bağlantısı */
+		.popoutText__56f7e.popoutTextDetails__94a41{
+			dolgu: 12 piksel;
+			sol dolgu: 64 piksel;
+			kenarlık yarıçapı: 4px;
+			arka plan: rgb(var(--infobarWarning));
+			renk: rgb(var(--text));
+			yazı tipi boyutu: 14 piksel;
+		}
+
+		/* Kaydedilmemiş değişiklikler */
+		.noticeRegion__2779f{
+			kenar boşluğu: 0 otomatik;
+			kenar boşluğu alt: 24 piksel;
+			dolgu: 0px;
+			arka plan: rgb(var(--infobarWarning));
+			kenarlık yarıçapı: 4px;
+			z-endeksi: 100;
+		}
+
+		/* Daha iyi anlaşmazlık: Eski BD Eklentileri */
+		.bd-notice,
+		.notice__5fd4c{
+			arka plan: rgb(var(--infobarWarning));
+		}
+			/* Simge */
+			.notice-mesajı{
+				sol kenar boşluğu: 48 piksel;
+			}
+			.notice-message::önce{
+				arka plan görüntüsü: url("https://github.com/Josh65-2201/Discord-Windows-11-theme/blob/main/assets/icon-infobar-warning.png");
+			}
+
+
+	/* Hata */
+		/* Sunucu kuralları contentDialog */
+		.root_a28985 .footer-31IekZ > .colorHeaderSecondary-g5teka{
+			dolgu: 12 piksel;
+			sol dolgu: 64 piksel;
+			arka plan: rgb(var(--infobarError));
+			kenarlık yarıçapı: 4px;
+			renk: #FFFFFF;
+			yazı tipi boyutu: 14 piksel;
+		}
+
+		/* Yaş kısıtlamalı kanal simgesi */
+		.sidebar_ded4b5 [d = "M19.8914 3.80204L22.2438 8.55654C22.5726 9.22119 22.0891 9.99999 21.3475 10L16.6179 10C15.8745 10 15.391 9.217 69 15.7235 8.55279L18.1007 3.79829C18.4701 3.05951 19.5251 3.06172 19.8914 3.80204ZM18.4998 5H19.4999V7 .5H18.4999L18.4998 5ZM18.4998 8.49887C18.4998 8.77589 18.7238 9 18.9998 9C19.2759 9 19.4999 8.77589 19.4999 8.49887C19.49 99 8.22224 19.2759 7.99773 18.9998 7.99773C18.7238 7.99773 18.4998 8.22224 18.4998 8.49887Z"]{
+			dolgu: kırmızı;
+		}
+
+		/* Discord'un Arka Planı Çöktü */
+		.wrapper__246a1{
+			arka plan: rgb(var(--infobarError));
+			arka plan resmi: yok !önemli;
+		}
+
+
+
+/* 8. Animasyonlar ---------------------------------- -------------------------------------------------- ------ */
+	/* Ayarlar */
+	@keyframes ayarlarıIconSpin{
+		%0 {dönüştür: döndür(0 derece);}
+		%100{dönüştürme: döndürme(360 derece);}
+	}
+
+	@ana kareler ayarlarıGiriş{
+		%0 {dönüştürme: TranslateY(100px); opaklık: 0;}
+		100%{dönüştürme: TranslateY(0px); opaklık: 1;}
+	}
+
+
+	/* contentDialog/açılır */
+	@keyframes contentDialogZoomIn{
+		%0 {dönüştürme: ölçek(1,1); opaklık: 0;}
+		%100{dönüştürme: ölçek(1); opaklık: 1;}
+	}
+
+	@keyframes contentDialogZoomOut{
+		%0 {dönüştürme: ölçek(1); opaklık: 1;}
+		%100{dönüştürme: ölçek(1.1); opaklık: 0;}
+	}
+
+
+
+/* 9. Devre dışı bırakılan öğeler -------------------------------------------- -------------------------------------------------- * /
+	/* D: Arkaplan */
+	.contentTransitionWrap_c5bc61, /* Ayarlar: İçerik arka planı */
+	.input_d266e7, /* Metin girişi */
+	.appMount_fae9dd, gövde, /* Anlaşmazlık */
+	.scroller_e9501c, /* Sayfayı keşfedin: Öğrenci merkezi */
+	.name__590d6.container-q97qHp, /* Sunucu kanalı kategorisi metni vurgulu */
+	.elevationHigh__312fd,
+	.children__32014:after, /* İçerik: Üst çubuk: düğme bölücü */
+	.circleIconButton_d8df29, /* Sunucu/Keşif ekle */
+	.wrapper_d281dd .childWrapper__01b9c, .wrapper_d281dd:hover .childWrapper__01b9c, /* Ana sayfa simgesi */
+	.container__7c79d [class*="animatedContainer-"], /* Kanallar: Banner resmi */
+	.addFriendInputWrapper__4bf8e, /* Ana Sayfa: Arkadaş ekle */
+	[aria-label="USER_SETTINGS"] .card_dc88cd:before, .theme-dark .copyInputDefault__8ac9f, .theme-dark .container-30qY7E, .theme-dark .input-2g-os5:hover, .theme-dark .copyInputDefault__8ac9f: vurgulu, .theme-dark .container-30qY7E:hover, /* Ayarlar: tuş bağlamaları */
+	.uploadModal_eae2a0 .inner__7afe9 .file_f309f6 .icon__25b13.image__00ac0, /* Dosya yükleme değiştirme simgesi */
+	.input-2g-os5, /* Sunucuya davet açılır */
+	.scrollableContainer__33e06,
+	.pageWrapper_fef757 .input-2g-os5,
+	.pageWrapper_fef757,
+	.layer-2aCOJ3 .header__28ebb .topPill-3DJJNV .item-3XjbnG:hover:değil(.disabled-1nofHP),
+	.katman-2aCOJ3 .başlık__28ebb .ikincil_c96c46,
+	.layer-2aCOJ3 .tertiary_bc0225,
+	.appMount_fae9dd,
+	.app__00c92,
+	.bg__7adbf,
+	.layer__2efaa,
+	.sidebarRegionScroller__1fa7e,
+	.scroller__00e7e .thin_b1c063 .scrollerBase-_bVAAt,
+	.peopleColumn__51df3,
+	.container__0a6a9,
+	.container__5c7e7,
+	.privateChannels__93473,
+	.chat__52833, /* Metin konuşma penceresi */
+	.threadSidebar-1o3BTy, /* Konular */
+	.nowPlayingColumn_f5023f,
+	.member_aa4760.member_b44d5d{ /* Kullanıcı üyeleri */
+		arka plan: şeffaf !önemli;
+		kenarlık: şeffaf;
+	}
+
+
+	/* D: Kenarlık */
+	.root-8LYsGj .topSection-13QKHs .header-S26rhB [aria-label*="Çevrimiçi"].avatar-3QF_VA,
+	.root-8LYsGj .topSection-13QKHs .header-S26rhB [aria-label*="Boşta"].avatar-3QF_VA,
+	.root-8LYsGj .topSection-13QKHs .header-S26rhB [aria-label*="Rahatsız Etmeyin"].avatar-3QF_VA,
+	.root-8LYsGj .topSection-13QKHs .header-S26rhB [aria-label*="Rahatsız etmeyin"].avatar-3QF_VA,
+	.root-8LYsGj .topSection-13QKHs .header-S26rhB [aria-label*="Akış"].avatar-3QF_VA,
+	.root-8LYsGj .topSection-13QKHs .header-S26rhB [aria-label*="Çevrimdışı"].avatar-3QF_VA,
+	.root-8LYsGj .topSection-13QKHs .header-S26rhB [aria-label*="Görünmez"].avatar-3QF_VA{
+		kenarlık: 0 piksel katı şeffaf;
+	}
+
+
+	/* D: Animasyonlar */	
+	.item_f9d377,
+	.container_e61cfb.recording__97366{
+		geçiş: yok !önemli;
+		animasyon: yok !önemli;
+	}
+
+
+	/* D: Kaydırma çubukları */
+	.scroller__83262, /* Profiliniz */
+	.videoGrid__8b6fc, /* Video görüşmesi */
+	.inner__178b2.thin_b1c063.scrollerBase-_bVAAt, /* Grup DM araması */
+	[class^='channelTextArea'] .scrollableContainer__33e06, /* Mesaj çubuğu */
+	.scroller__5a651,
+	.scroller__750f5, /* İçerik menüsü */
+	.description-zXiu5E, /* BD Eklentisi: BD Eklentisi ve DevilBro'nun tema deposu */
+	.menu_dc52c6.styleFixed-2_NfVL.menu-1AgizY{
+		taşma: gizli !önemli;
+	}
+
+
+	/* D: Diğer */
+	.voiceChannelsButton__46c37, /* Kanal çubuğu: Sesli tümünü göster düğmesi */
+	.keybind__57645, /* Ayarlar: Kapat butonu tuş ataması */
+	.art-2Y6Pk3, /* Özel durum: Başlık resmi */
+	.modalCloseButton-Y-w1-a, /* Özel durum: Ekstra kapatma düğmesi */
+	.headerBar_afb1ac, /* DM'ler: Nitro sayfasının üst kısmındaki rastgele çubuk */
+	ul.content__23cab > div:first-child, /* Sunucu kenar çubuğu: Boş boşluklar */
+	.content__1a4fe::önce,
+	.upperBadge-1V6Iyi, /* Sunucular: Roket simgesi */
+	#hesap-bölücü-2,
+	.arrowGroup__0c805,
+	#account-status-toplayıcı, /* Kullanıcı oturum açmış: Profil durumu */
+	.layer__2efaa.layer__2efaa ~ .layer__2efaa .divider-_0um2u, .layer__2efaa.layer__2efaa ~ .layer__2efaa .divider-ogkn3u, /* Ayarlar: seçenek bölücü */
+	.settingsBanner-2E5fAp, /* Ayarlar: Profil banner'ı */
+	.avatarSpeaking-33RRJU, /* Kullanıcı profili: Konuşma zili */
+	.status__2a4a6, .divider_c09b64, .children__32014 > .iconWrapper_af9215, .titleWrapper__482dc, /* Kanal bilgileri: Seçilen metin */
+	#account-switch-account > .iconContainer__829e7, /* Kullanıcı profili: Hesap değiştir */
+	.matchingPostsRow-2IiEQ1, /* Forumlar: Eşleşen gönderi çubuğu */
+	.accountProfileCard__22589 > .bannerSVGWrapper__3e7b0, /* Ayarlar: Kullanıcı profili: önizleme */
+	.wrapper__2e846, /* İçerik menüsü: Emoji önerileri */
+	.art-1TvEXv, .close-1mLglB, .headerDescription-yFPU-Q, /* Ekranı paylaş: Başlık */
+	.option_b5597b:sonra,
+	.nameTag__0e320, /* Başlık çubuğu: Oturum açan kullanıcı adı */
+	.listItem_fa7b36 > .guildSeparator_dcb3cc, /* Sunucu çubuğu: Bölücü */
+	.tabBarItemContainer_d74773 > svg, /* Sunucu ayarları: Kanal simgesini sil */
+	.welcomeCTAButtonOuter_a7da64, /* Mesajlar: Merhaba demek için el sallayın */
+	.form__13a2c:before, /* Mesaj kutusundaki yapı */
+	.shineContainerDefault-3f8X_o, /* Düğme nitro parlak efekti */
+	.content-2a4AW9 > div[style="height: 8px;"], /* DM: Arkadaş düğmesi aralığı */
+	.channelTextArea__2e60f .buttons_ce5b56 düğmesi[aria-label=Çıkartma seçiciyi aç'],
+	.channelTextArea__2e60f .buttons_ce5b56 düğmesi[aria-label="GIF seçiciyi aç"],
+	.inner-26JK4f, /* Döndürücü yükleniyor: Kullanıcı profili */
+	.spinningCircleInner__958da, /* Döndürücü yükleniyor: Ara */
+	.spinner_f931ee > span, /* Döndürücü yükleniyor: Hepsi */
+	.separator_fdbcfd, .header_f72511, .bd-sidebar-header, /* Ayarlar Başlıkları */
+	.socialLinks_c1fc99, /* Ayarlar, sosyal bağlantıların daha iyi uyumsuzluğunu sağlar */
+	.iconWrapper_af9215[aria-label="Yardım"]{ /* Kanal bilgi çubuğu: Yardım düğmesi */
+		görüntü: yok !önemli;
+	}
+
+
+	/* İsteğe bağlı */
+		/* Nitro reklamlar */
+		.colorPremiumGradient__45b85, /* İçerik menüsü: Süper reaksiyonlar */
+		.premiumIconWrapper__83620, /* Kullanıcı profili: Animasyonlu banner rozeti */
+		.wrapper-C1y4Sz, /* Mini kullanıcı profili: AD başlığı */
+		.channel_c21703.container-32HW5s[aria-posinset="2"], /* Ana Sayfa: Nitro sekmesini kaldırın */
+		.tier0Container__5027a, /* Ayarlar: Sunucu güçlendirme */
+		butonu[aria-label="Hediye gönder"],/* Mesaj çubuğu: Hediye butonu */
+		.upsellContainer-TwfTaF, /* Ayarlar: Sunucu profilleri */
+		.premiumFeatureBorder__9bbb3, /* Ayarlar: Genel profiller */
+		.premiumTab__57bdc, /* Ayarlar */
+		.wrapper-1z1z-S{ /* Mini kullanıcı profili: özel resim */
+			görüntü: var(--nitro) !important;
+		}
+
+
+		/* Kullanıcı Bildirimlerine El Sallayın */
+		.chat__52833 .containerExpanded_c19a2a,
+		.chat__52833 .containerCompact_a8a449{
+			ekran: var(--waveToUser) !important;
+		}
